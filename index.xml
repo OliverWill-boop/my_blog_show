@@ -7,13 +7,27 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Sat, 21 Mar 2026 18:03:22 +0800</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Test</title>
-        <link>https://example.com/p/test/</link>
-        <pubDate>Sat, 21 Mar 2026 18:03:22 +0800</pubDate>
+        <lastBuildDate>Sat, 21 Mar 2026 20:57:26 +0800</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>全流程测试</title>
+        <link>https://example.com/p/%E5%85%A8%E6%B5%81%E7%A8%8B%E6%B5%8B%E8%AF%95/</link>
+        <pubDate>Sat, 21 Mar 2026 20:57:26 +0800</pubDate>
         
-        <guid>https://example.com/p/test/</guid>
-        <description>&lt;p&gt;这是我的测试文档&lt;/p&gt;
+        <guid>https://example.com/p/%E5%85%A8%E6%B5%81%E7%A8%8B%E6%B5%8B%E8%AF%95/</guid>
+        <description>&lt;p&gt;这是一个全流程测试文档&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>日志书写流程</title>
+        <link>https://example.com/p/%E6%97%A5%E5%BF%97%E4%B9%A6%E5%86%99%E6%B5%81%E7%A8%8B/</link>
+        <pubDate>Sat, 21 Mar 2026 20:57:26 +0800</pubDate>
+        
+        <guid>https://example.com/p/%E6%97%A5%E5%BF%97%E4%B9%A6%E5%86%99%E6%B5%81%E7%A8%8B/</guid>
+        <description>&lt;h1 id=&#34;日志书写流程&#34;&gt;日志书写流程
+&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;在Typera上进行md文档的书写，要注意hugo所需要的前缀&lt;/li&gt;
+&lt;li&gt;书写完成后保存到post文件夹，打开终端启动hugo server，确定没问题&lt;/li&gt;
+&lt;li&gt;然后进行git推送，搞定&lt;/li&gt;
+&lt;/ol&gt;
 </description>
         </item>
         <item>

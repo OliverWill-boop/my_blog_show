@@ -24,9 +24,18 @@
         <guid>https://example.com/p/%E6%97%A5%E5%BF%97%E4%B9%A6%E5%86%99%E6%B5%81%E7%A8%8B/</guid>
         <description>&lt;h1 id=&#34;日志书写流程&#34;&gt;日志书写流程
 &lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;在Typera上进行md文档的书写，要注意hugo所需要的前缀&lt;/li&gt;
-&lt;li&gt;书写完成后保存到post文件夹，打开终端启动hugo server，确定没问题&lt;/li&gt;
-&lt;li&gt;然后进行git推送，搞定&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在Typera上进行md文档的书写，要注意hugo所需要的前缀&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;书写完成后保存到post文件夹，打开终端启动hugo server，确定没问题&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然后进行git推送&lt;/p&gt;
+&lt;p&gt;​	git add .（&lt;em&gt;加载全部文件&lt;/em&gt;）&lt;/p&gt;
+&lt;p&gt;​	git commit -m “备注”&lt;/p&gt;
+&lt;p&gt;​	git  push -u origin main&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 </description>
         </item>

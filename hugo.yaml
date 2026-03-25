@@ -1,7 +1,7 @@
 baseurl: https://example.com/
 languageCode: en-us
 theme: hugo-theme-stack
-title: Example Site
+title: 告白火山的个人博客
 copyright: Example Person
 
 # Theme i18n support
@@ -15,18 +15,18 @@ hasCJKLanguage: false
 languages:
     en:
         languageName: English
-        title: Example Site
+        title: 告白火山的个人博客
         weight: 1
         params:
             sidebar:
                 subtitle: Example description
     zh-cn:
         languageName: 中文
-        title: 演示站点
+        title: 告白火山的个人博客
         weight: 2
         params:
             sidebar:
-                subtitle: 演示说明
+                subtitle: 记录个人成长
     ar:
         languageName: عربي
         languagedirection: rtl
@@ -71,8 +71,8 @@ params:
         subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         avatar:
             enabled: true
-            local: true
-            src: img/avatar.png
+            local: false
+            src: /blog_img/微信图片_20260325190916_43_188.jpg
 
     article:
         math: false

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="-&ndash;\ntitle: 蓝桥杯第十六届省赛题目学习笔记\ndescription: 学习笔记\ndate: 2026-03-22\nslug: 十六届省赛题目学习笔记\ncategories:\n- 蓝桥杯\ntags:\n- 蓝桥杯\n-&ndash;\n第十六届省赛题目学习笔记 底层书写 新建文件 新建文件，src（user,driver），prj 打开keil，在user里新建main，注意保存位置要指定 在文件资源管理器里操作，在driver里新建好其他模块的.c和.h文件 然后再把.c文件在keil里设置，放进去，方便查看和编写 main代码初次搭建 引入头文件 main函数框架搭好 编译一下看看有无问题 led代码书写 引用头文件 看看涉不涉及PWM，继电器和蜂鸣器（模块选择性书写，题目要求用什么模块就写什么模块） 模块书写 下面这个关于锁存器的操作，死记住就好，但是可以简单记一下那个0x80是怎么推导出来的：原理图上会写寄存器的什么Y4C之类的，那个4二进制是0100，把1移动到最高位就是1000000，十六进制就是0x80。其他外设的寄存器操作也可以这样记。\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 if(temp_1!=temp_1_old) { \u200b P0=~temp_1; \u200b temp=P2&amp;0x1f;//准备开门 \u200b temp=temp|0x80;//指定寄存器 \u200b P2=temp;//开门 \u200b temp=P2&amp;0x1f;//准备关门 \u200b P2=temp;//关门 \u200b temp_1_old=temp_1; } 在main函数中简单调用一下，看看模块写的功能可不可以正常实现 在main文件里把led模块用led_proc封装起来 由于其他模块的引用头文件，选择模块书写，简单调用查错，在main中进行函数封装。这些步骤类似，因此其他模块只说模块代码中难理解的部分。\n">
 <title></title>
 
 <link rel='canonical' href='http://localhost:1313/p/'>
 
 <link rel="stylesheet" href="/scss/style.min.6a692fd055deae459f2a9767f57f3855ba80cafd5041317f24f7360f6ca47cdf.css"><meta property='og:title' content="">
-<meta property='og:description' content="">
+<meta property='og:description' content="-&ndash;\ntitle: 蓝桥杯第十六届省赛题目学习笔记\ndescription: 学习笔记\ndate: 2026-03-22\nslug: 十六届省赛题目学习笔记\ncategories:\n- 蓝桥杯\ntags:\n- 蓝桥杯\n-&ndash;\n第十六届省赛题目学习笔记 底层书写 新建文件 新建文件，src（user,driver），prj 打开keil，在user里新建main，注意保存位置要指定 在文件资源管理器里操作，在driver里新建好其他模块的.c和.h文件 然后再把.c文件在keil里设置，放进去，方便查看和编写 main代码初次搭建 引入头文件 main函数框架搭好 编译一下看看有无问题 led代码书写 引用头文件 看看涉不涉及PWM，继电器和蜂鸣器（模块选择性书写，题目要求用什么模块就写什么模块） 模块书写 下面这个关于锁存器的操作，死记住就好，但是可以简单记一下那个0x80是怎么推导出来的：原理图上会写寄存器的什么Y4C之类的，那个4二进制是0100，把1移动到最高位就是1000000，十六进制就是0x80。其他外设的寄存器操作也可以这样记。\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 if(temp_1!=temp_1_old) { \u200b P0=~temp_1; \u200b temp=P2&amp;0x1f;//准备开门 \u200b temp=temp|0x80;//指定寄存器 \u200b P2=temp;//开门 \u200b temp=P2&amp;0x1f;//准备关门 \u200b P2=temp;//关门 \u200b temp_1_old=temp_1; } 在main函数中简单调用一下，看看模块写的功能可不可以正常实现 在main文件里把led模块用led_proc封装起来 由于其他模块的引用头文件，选择模块书写，简单调用查错，在main中进行函数封装。这些步骤类似，因此其他模块只说模块代码中难理解的部分。\n">
 <meta property='og:url' content='http://localhost:1313/p/'>
 <meta property='og:site_name' content='演示站点'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' />
 <meta name="twitter:title" content="">
-<meta name="twitter:description" content="">
+<meta name="twitter:description" content="-&ndash;\ntitle: 蓝桥杯第十六届省赛题目学习笔记\ndescription: 学习笔记\ndate: 2026-03-22\nslug: 十六届省赛题目学习笔记\ncategories:\n- 蓝桥杯\ntags:\n- 蓝桥杯\n-&ndash;\n第十六届省赛题目学习笔记 底层书写 新建文件 新建文件，src（user,driver），prj 打开keil，在user里新建main，注意保存位置要指定 在文件资源管理器里操作，在driver里新建好其他模块的.c和.h文件 然后再把.c文件在keil里设置，放进去，方便查看和编写 main代码初次搭建 引入头文件 main函数框架搭好 编译一下看看有无问题 led代码书写 引用头文件 看看涉不涉及PWM，继电器和蜂鸣器（模块选择性书写，题目要求用什么模块就写什么模块） 模块书写 下面这个关于锁存器的操作，死记住就好，但是可以简单记一下那个0x80是怎么推导出来的：原理图上会写寄存器的什么Y4C之类的，那个4二进制是0100，把1移动到最高位就是1000000，十六进制就是0x80。其他外设的寄存器操作也可以这样记。\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 if(temp_1!=temp_1_old) { \u200b P0=~temp_1; \u200b temp=P2&amp;0x1f;//准备开门 \u200b temp=temp|0x80;//指定寄存器 \u200b P2=temp;//开门 \u200b temp=P2&amp;0x1f;//准备关门 \u200b P2=temp;//关门 \u200b temp_1_old=temp_1; } 在main函数中简单调用一下，看看模块写的功能可不可以正常实现 在main文件里把led模块用led_proc封装起来 由于其他模块的引用头文件，选择模块书写，简单调用查错，在main中进行函数封装。这些步骤类似，因此其他模块只说模块代码中难理解的部分。\n">
     </head>
     <body class="
     article-page
@@ -268,7 +268,65 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#底层书写"><strong>底层书写</strong></a>
+      <ol>
+        <li><a href="#新建文件"><strong>新建文件</strong></a></li>
+        <li><a href="#main代码初次搭建"><strong>main代码初次搭建</strong></a></li>
+        <li><a href="#led代码书写"><strong>led代码书写</strong></a></li>
+        <li><a href="#seg代码书写"><strong>seg代码书写</strong></a></li>
+        <li><a href="#调度器书写"><strong>调度器书写</strong></a>
+          <ol>
+            <li><a href="#debug操作因为经常有人在书写调度器的时候出现一些错误这很常见直接debug就好了">debug操作，因为经常有人在书写调度器的时候出现一些错误，这很常见，直接debug就好了</a></li>
+          </ol>
+        </li>
+        <li><a href="#key代码书写"><strong>key代码书写</strong></a></li>
+        <li><a href="#init代码书写系统初始化"><strong>init代码书写（系统初始化）</strong></a></li>
+        <li><a href="#onewire代码书写温度传感器模块"><strong>onewire代码书写（温度传感器模块）</strong></a></li>
+        <li><a href="#ul代码书写超声波模块"><strong>ul代码书写（超声波模块）</strong></a></li>
+        <li><a href="#iic代码书写ad模块"><strong>iic代码书写（AD模块）</strong></a></li>
+      </ol>
+    </li>
+    <li><a href="#应用层书写"><strong>应用层书写</strong></a>
+      <ol>
+        <li><a href="#数码管界面"><strong>数码管界面</strong></a></li>
+        <li><a href="#按键和超声波功能实现"><strong>按键和超声波功能实现</strong></a></li>
+        <li><a href="#led功能实现"><strong>led功能实现</strong></a></li>
+        <li><a href="#dac功能实现"><strong>DAC功能实现</strong></a></li>
+        <li><a href="#温度功能实现"><strong>温度功能实现</strong></a></li>
+      </ol>
+    </li>
+    <li><a href="#总结">总结</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="main-article">
@@ -303,7 +361,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 0 分钟
+                    阅读时长: 7 分钟
                 </time>
             </div>
         
@@ -318,7 +376,1139 @@
     <section class="article-content">
     
     
-    
+    <p>-&ndash;</p>
+<p>title: 蓝桥杯第十六届省赛题目学习笔记</p>
+<p>description: 学习笔记</p>
+<p>date: 2026-03-22</p>
+<p>slug: 十六届省赛题目学习笔记</p>
+<p>categories:</p>
+<p>- 蓝桥杯</p>
+<p>tags:</p>
+<p>- 蓝桥杯</p>
+<p>-&ndash;</p>
+<h1 id="第十六届省赛题目学习笔记">第十六届省赛题目学习笔记
+</h1><h2 id="底层书写"><strong>底层书写</strong>
+</h2><h3 id="新建文件"><strong>新建文件</strong>
+</h3><ul>
+<li>新建文件，src（user,driver），prj</li>
+<li>打开keil，在user里新建main，注意保存位置要指定</li>
+<li>在文件资源管理器里操作，在driver里新建好其他模块的.c和.h文件</li>
+<li>然后再把.c文件在keil里设置，放进去，方便查看和编写</li>
+</ul>
+<h3 id="main代码初次搭建"><strong>main代码初次搭建</strong>
+</h3><ul>
+<li>引入头文件</li>
+<li>main函数框架搭好</li>
+<li>编译一下看看有无问题</li>
+</ul>
+<h3 id="led代码书写"><strong>led代码书写</strong>
+</h3><ul>
+<li>引用头文件</li>
+<li>看看涉不涉及PWM，继电器和蜂鸣器（模块选择性书写，题目要求用什么模块就写什么模块）</li>
+<li>模块书写</li>
+</ul>
+<blockquote>
+<p>下面这个关于锁存器的操作，死记住就好，但是可以简单记一下那个0x80是怎么推导出来的：原理图上会写寄存器的什么Y4C之类的，那个4二进制是0100，把1移动到最高位就是1000000，十六进制就是0x80。其他外设的寄存器操作也可以这样记。</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">  if(temp_1!=temp_1_old)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  {
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">​    P0=~temp_1;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">​    temp=P2&amp;0x1f;//准备开门
+</span></span><span class="line"><span class="cl">​    temp=temp|0x80;//指定寄存器
+</span></span><span class="line"><span class="cl">​    P2=temp;//开门
+</span></span><span class="line"><span class="cl">​    temp=P2&amp;0x1f;//准备关门
+</span></span><span class="line"><span class="cl">​    P2=temp;//关门
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">​    temp_1_old=temp_1;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  }
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>在main函数中简单调用一下，看看模块写的功能可不可以正常实现</li>
+<li>在main文件里把led模块用led_proc封装起来</li>
+</ul>
+<blockquote>
+<p><em><strong>由于其他模块的引用头文件，选择模块书写，简单调用查错，在main中进行函数封装。这些步骤类似，因此其他模块只说模块代码中难理解的部分。</strong></em></p>
+</blockquote>
+<h3 id="seg代码书写"><strong>seg代码书写</strong>
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">void Seg_Disp(unsigned char wela,unsigned char dula,bit point)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	unsigned char temp=0;
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	P0=0xff;//全灭消影
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	......(寄存器操作)
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	P0=0x01&lt;&lt;wela;//位选
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	......(寄存器操作)
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	P0=seg_dula[dula];//段选
+</span></span><span class="line"><span class="cl">	if(point) P0&amp;=0x7f;
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	......(寄存器操作)
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>记得用seg_buf[]来存放显示数据，然后在定时器中断里用seg_pos做动态扫描，解决<strong>数码管动态显示</strong>的问题</li>
+</ul>
+<h3 id="调度器书写"><strong>调度器书写</strong>
+</h3><ul>
+<li>因为现在已经写了两个外设了，所以现在把调度器写上去</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">idata unsigned long int uwtick = 0;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">typedef struct
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	void (*task_func)(void);
+</span></span><span class="line"><span class="cl">	unsigned long int rate_ms; // 任务执行周期（毫秒）
+</span></span><span class="line"><span class="cl">	unsigned long int last_ms; // 上次执行时间
+</span></span><span class="line"><span class="cl">} task_t;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">idata task_t scheduler_task[] = {
+</span></span><span class="line"><span class="cl">	{Led_Proc, 1, 0},
+</span></span><span class="line"><span class="cl">	{Key_Proc, 10, 0},
+</span></span><span class="line"><span class="cl">	{Seg_Proc, 20, 0},
+</span></span><span class="line"><span class="cl">	{Get_Temperature, 300, 0},
+</span></span><span class="line"><span class="cl">	{Get_Distance, 150, 0},
+</span></span><span class="line"><span class="cl">	{DA_Proc, 100, 0}
+</span></span><span class="line"><span class="cl">};
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">idata unsigned char task_num;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">void Scheduler_Init()
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	task_num = sizeof(scheduler_task) / sizeof(task_t);
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">void Scheduler_Run()
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	unsigned char i;
+</span></span><span class="line"><span class="cl">	for (i = 0; i &lt; task_num; i++)
+</span></span><span class="line"><span class="cl">	{
+</span></span><span class="line"><span class="cl">		unsigned long int now_time = uwtick;
+</span></span><span class="line"><span class="cl">		if (now_time &gt;= scheduler_task[i].rate_ms + scheduler_task[i].last_ms)
+</span></span><span class="line"><span class="cl">		{
+</span></span><span class="line"><span class="cl">			scheduler_task[i].last_ms = now_time;
+</span></span><span class="line"><span class="cl">			scheduler_task[i].task_func();
+</span></span><span class="line"><span class="cl">		}
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">void Timer1_Isr(void) interrupt 3    //这里注意一下，数码管和调度器用的都是定时器1
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	uwtick++;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	seg_pos = (++seg_pos) % 8;  //0~7循环
+</span></span><span class="line"><span class="cl">	if (seg_buf[seg_pos] &gt; 20)
+</span></span><span class="line"><span class="cl">		Seg_Disp(seg_pos, seg_buf[seg_pos] - &#39;,&#39;, 1);
+</span></span><span class="line"><span class="cl">	else
+</span></span><span class="line"><span class="cl">		Seg_Disp(seg_pos, seg_buf[seg_pos], 0);
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">void Timer1_Init(void) // 1毫秒@12.000MHz
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	AUXR &amp;= 0xBF; // 定时器时钟12T模式
+</span></span><span class="line"><span class="cl">	TMOD &amp;= 0x0F; // 设置定时器模式
+</span></span><span class="line"><span class="cl">	TL1 = 0x18;	  // 设置定时初始值
+</span></span><span class="line"><span class="cl">	TH1 = 0xFC;	  // 设置定时初始值
+</span></span><span class="line"><span class="cl">	TF1 = 0;	  // 清除TF1标志
+</span></span><span class="line"><span class="cl">	TR1 = 1;	  // 定时器1开始计时
+</span></span><span class="line"><span class="cl">	ET1 = 1;	  // 使能定时器1中断
+</span></span><span class="line"><span class="cl">	EA = 1;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">void main()
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	Scheduler_Init();
+</span></span><span class="line"><span class="cl">	Timer1_Init();
+</span></span><span class="line"><span class="cl">	while (1)
+</span></span><span class="line"><span class="cl">	{
+</span></span><span class="line"><span class="cl">		Scheduler_Run();
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="debug操作因为经常有人在书写调度器的时候出现一些错误这很常见直接debug就好了">debug操作，因为经常有人在书写调度器的时候出现一些错误，这很常见，直接debug就好了
+</h4><ul>
+<li>首先在isp上设置仿真芯片</li>
+<li>在keil里的debug选项中也设置好对应的com口和对应的芯片</li>
+<li>哪个模块出现问题了，就debug对应模块，先看有没有执行对应模块的代码，如果压根没执行，那就说明是定时器出现问题了</li>
+</ul>
+<h3 id="key代码书写"><strong>key代码书写</strong>
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">unsigned char Key_Read()
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	unsigned char temp=0;
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	P44=0;P42=1;P35=1;
+</span></span><span class="line"><span class="cl">	if(P32==0)temp=5;
+</span></span><span class="line"><span class="cl">	if(P33==0)temp=4;
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	P44=1;P42=0;P35=1;
+</span></span><span class="line"><span class="cl">	if(P32==0)temp=9;
+</span></span><span class="line"><span class="cl">	if(P33==0)temp=8;
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	P44=1;P42=1;P35=0;
+</span></span><span class="line"><span class="cl">	if(P33==0)temp=12;
+</span></span><span class="line"><span class="cl">	return temp;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>根据题目，用到什么按键，就去在底层扫描什么按键</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">	key_val = Key_Read();
+</span></span><span class="line"><span class="cl">	key_down = key_val &amp; (key_val ^ key_old);
+</span></span><span class="line"><span class="cl">	key_up = ~key_val &amp; (key_val ^ key_old);
+</span></span><span class="line"><span class="cl">	key_old = key_val;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>由于这个是时候已经写好了调度器，并且确认无错，这个时候直接进行函数key_proc封装，然后在调度器里调用就可以了，<strong>10ms跑一次，可以在1.5调度器那一节看到完整的任务清单代码</strong></p>
+</li>
+<li>
+<p>然后在key_proc里写一些简单逻辑，来进行测试。<strong>注意测试完成之后要把测试代码删掉</strong></p>
+</li>
+</ul>
+<h3 id="init代码书写系统初始化"><strong>init代码书写（系统初始化）</strong>
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">void System_Init()
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	P0=0xff;
+</span></span><span class="line"><span class="cl">	P2=P2&amp;0x1f|0x80;
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	P0=0x00;
+</span></span><span class="line"><span class="cl">	P2=P2&amp;0x1f|0xa0;
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	P2=P2&amp;0x1f;   //目的 ： 关闭所有锁存器 ，确保初始化完成后所有外设都处于关闭状态
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>这个时候，main函数就应该再加上一个系统初始化函数声明了</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">void main()
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	System_Init();
+</span></span><span class="line"><span class="cl">	Scheduler_Init();
+</span></span><span class="line"><span class="cl">	Timer1_Init();
+</span></span><span class="line"><span class="cl">	while (1)
+</span></span><span class="line"><span class="cl">	{
+</span></span><span class="line"><span class="cl">		Scheduler_Run();
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="onewire代码书写温度传感器模块"><strong>onewire代码书写（温度传感器模块）</strong>
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sbit DQ=P1^4;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">......
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">float Rd_Temperature()
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	unsigned char high,low;
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	init_ds18b20();
+</span></span><span class="line"><span class="cl">	Write_DS18B20(0xcc);
+</span></span><span class="line"><span class="cl">	Write_DS18B20(0x44);
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	Delay_OneWire(200);
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	init_ds18b20();
+</span></span><span class="line"><span class="cl">	Write_DS18B20(0xcc);
+</span></span><span class="line"><span class="cl">	Write_DS18B20(0xbe);
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	low=Read_DS18B20();
+</span></span><span class="line"><span class="cl">	high=Read_DS18B20();
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	return (float)(high&lt;&lt;8|low)*0.0625;  //注意记住！！！！
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>0xcc ， 0x44 ， 0xbe</strong>这三个手册上有，但是建议死记住，节约时间</li>
+<li>之后就是在main文件里建立一个get_temperature的函数，封装，然后在调度器调用，然后测试</li>
+<li>注意测试的时候，一般来说可以使用数码管显示出来温度，但是也可以使用debug，然后看变量的数值变化就可以了</li>
+<li>如果要用数码管来显示，就用isp进行串口烧录</li>
+</ul>
+<h3 id="ul代码书写超声波模块"><strong>ul代码书写（超声波模块）</strong>
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#include &#34;ul.h&#34;
+</span></span><span class="line"><span class="cl">#include &#34;intrins.h&#34;  //由于引用了_nop_();
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sbit US_TX=P1^0;  //原理图上会写
+</span></span><span class="line"><span class="cl">sbit US_RX=P1^1;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">void Delay12us(void)	//@12.000MHz
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	unsigned char data i;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	_nop_();
+</span></span><span class="line"><span class="cl">	_nop_();  
+</span></span><span class="line"><span class="cl">	i = 38;  //手动改成38比较好，人家测试出来的
+</span></span><span class="line"><span class="cl">	while (--i);
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">void Ut_Wave_Init()   //发波程序
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	unsigned char i;
+</span></span><span class="line"><span class="cl">	for(i=0;i&lt;8;i++)
+</span></span><span class="line"><span class="cl">	{
+</span></span><span class="line"><span class="cl">		US_TX=1;
+</span></span><span class="line"><span class="cl">		Delay12us();
+</span></span><span class="line"><span class="cl">		US_TX=0;
+</span></span><span class="line"><span class="cl">		Delay12us();
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">unsigned int Ut_Wave_Data(float speed)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	unsigned int time;
+</span></span><span class="line"><span class="cl">	float temp=0;
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	CMOD = 0x00;  //死记
+</span></span><span class="line"><span class="cl">	CH=CL=0;   //死记
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	Ut_Wave_Init();  //发波
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	CR=1;  //开始计时
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	while((US_RX==1)&amp;&amp;(CF==0));  //等待返回，跳出这个循环的条件，要么是收到东西了，要么是超出范围定时器溢出了
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	CR=0;  //停止计时
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	if(CF==0)   //如果没有溢出，也就是收到东西了
+</span></span><span class="line"><span class="cl">	{
+</span></span><span class="line"><span class="cl">		time=CH&lt;&lt;8|CL;
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		//
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		temp=(float)time*speed/20000.0f;
+</span></span><span class="line"><span class="cl">		return temp;
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		//  其实就相当于：return time*0.017;       这里用speed，是因为后面题目有一个温度和速度的公式
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">	else    //如果没有收到东西
+</span></span><span class="line"><span class="cl">	{
+</span></span><span class="line"><span class="cl">		CF=0;
+</span></span><span class="line"><span class="cl">		return 999;  //官方例程就是这样给的
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>超声波的底层还是比较复杂的，所以我把整个文件都放在这里</li>
+<li>然后就是和前面一样，定义一个距离的变量，然后封装一个get_distance函数，然后放进调度器里，然后再进行一下测试</li>
+</ul>
+<h3 id="iic代码书写ad模块"><strong>iic代码书写（AD模块）</strong>
+</h3><ul>
+<li>和onewire差不多</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">void Da_Write(unsigned char dat)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	I2CStart();
+</span></span><span class="line"><span class="cl">	I2CSendByte(0x90);  //0x90死记就行了
+</span></span><span class="line"><span class="cl">	I2CWaitAck();
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	I2CSendByte(0x41);   //死记就行了
+</span></span><span class="line"><span class="cl">	I2CWaitAck();
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	I2CSendByte(dat);
+</span></span><span class="line"><span class="cl">	I2CWaitAck();
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>注意传入的是数字电压</li>
+<li>可以使用万用表测量，但一般都没啥问题其实</li>
+</ul>
+<h2 id="应用层书写"><strong>应用层书写</strong>
+</h2><h3 id="数码管界面"><strong>数码管界面</strong>
+</h3><ul>
+<li>先找到一共有多少界面和子界面，然后去定义变量</li>
+<li>之后在seg_proc里进行界面建构，有子界面就是switch里再套一个switch</li>
+<li>
+<img src="https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/20260325164416667.png" alt="img" style="zoom:25%;" />
+</li>
+<li>高位熄灭</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">             seg_buf[4] = (distance &gt;= 1000)
+</span></span><span class="line"><span class="cl">							 ? distance / 1000 % 10
+</span></span><span class="line"><span class="cl">							 : 10;
+</span></span><span class="line"><span class="cl">			seg_buf[5] = (distance &gt;= 100)
+</span></span><span class="line"><span class="cl">							 ? distance / 100 % 10
+</span></span><span class="line"><span class="cl">							 : 10;
+</span></span><span class="line"><span class="cl">			seg_buf[6] = (distance &gt;= 10)
+</span></span><span class="line"><span class="cl">							 ? distance / 10 % 10
+</span></span><span class="line"><span class="cl">							 : 10;
+</span></span><span class="line"><span class="cl">			seg_buf[7] = distance % 10;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="按键和超声波功能实现"><strong>按键和超声波功能实现</strong>
+</h3><ul>
+<li>往往题目会对按键在某个界面之下才有反应，我们要首先去在key_proc中对这个限制搭框架</li>
+<li>然后在这个框架之下，把一些按键的逻辑装进去</li>
+<li>但是有些独特的限制，可能不只是就是界面限制，这个时候我们就需要单独搭建另一个框架</li>
+<li>如果有对某一个任务进行<strong>时间方面的操作</strong>的时候，我们就要对调度器的那个<strong>scheduler_task[].rate_ms，和scheduler_task[].last_ms</strong>进行一些操作，另外还要注意，<strong>我们调度器里的是毫秒，而题目要求我们的往往都是秒，要注意1000的这个换算</strong></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="k">switch</span> <span class="p">(</span><span class="n">seg_show_mode</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="o">/*</span> <span class="err">数据显示界面</span> <span class="o">*/</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="n">key_down</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">signal_flag</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>  <span class="o">//</span> <span class="err">单次测量标志</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="n">summation_flag</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="o">//</span><span class="err">累加进程立即结束</span>
+</span></span><span class="line"><span class="cl">			<span class="n">summation_index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="n">distance</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>     <span class="o">//</span><span class="err">防止上一次测量结果影响当前测量</span>
+</span></span><span class="line"><span class="cl">			<span class="n">distance_sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="n">scheduler_task</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">last_ms</span> <span class="o">=</span> <span class="n">uwtick</span><span class="p">;</span> <span class="o">//</span> <span class="err">立即执行</span><span class="n">Get_Distance任务</span>
+</span></span><span class="line"><span class="cl">			<span class="n">range_show_mode</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="n">Get_Distance</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="n">key_down</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">summation_flag</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="n">signal_flag</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="n">summation_index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="n">distance</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="n">distance_sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="o">//</span> <span class="err">根据选择的参数设置测量间隔时间</span>
+</span></span><span class="line"><span class="cl">			<span class="n">scheduler_task</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">rate_ms</span> <span class="o">=</span> <span class="p">(</span><span class="n">unsigned</span> <span class="ne">int</span><span class="p">)</span><span class="n">para_time_arr</span><span class="p">[</span><span class="n">para_time_index</span><span class="p">]</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="n">scheduler_task</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">last_ms</span> <span class="o">=</span> <span class="n">uwtick</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="n">range_show_mode</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="n">Get_Distance</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="o">/*</span> <span class="err">参数设置界面</span> <span class="o">*/</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="n">key_down</span> <span class="o">==</span> <span class="mi">9</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="k">switch</span> <span class="p">(</span><span class="n">para_show_mode</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">				<span class="o">/*</span> <span class="err">测量时间</span> <span class="o">*/</span>
+</span></span><span class="line"><span class="cl">				<span class="n">para_time_index</span> <span class="o">=</span> <span class="p">(</span><span class="o">++</span><span class="n">para_time_index</span><span class="p">)</span> <span class="o">%</span> <span class="mi">4</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">				<span class="o">/*</span> <span class="err">测量次数</span> <span class="o">*/</span>
+</span></span><span class="line"><span class="cl">				<span class="n">para_num_index</span> <span class="o">=</span> <span class="p">(</span><span class="o">++</span><span class="n">para_num_index</span><span class="p">)</span> <span class="o">%</span> <span class="mi">4</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>同时因为，按键主要是对超声波模块进行操作的，所以对超声波模块也有一些设置</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">void</span> <span class="n">Get_Distance</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">unsigned</span> <span class="ne">int</span> <span class="n">temp</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">signal_flag</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="o">//</span> <span class="err">单次测量模式</span>
+</span></span><span class="line"><span class="cl">		<span class="n">temp</span> <span class="o">=</span> <span class="n">Ut_Wave_Data</span><span class="p">(</span><span class="n">speed</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="n">distance</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">signal_flag</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">summation_flag</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="o">//</span> <span class="err">累加测量模式</span>
+</span></span><span class="line"><span class="cl">		<span class="n">temp</span> <span class="o">=</span> <span class="n">Ut_Wave_Data</span><span class="p">(</span><span class="n">speed</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="n">distance_sum</span> <span class="o">+=</span> <span class="n">temp</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">summation_index</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="o">//</span> <span class="err">累加测量次数到达结束累加测量</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="n">summation_index</span> <span class="o">&gt;=</span> <span class="n">para_num_arr</span><span class="p">[</span><span class="n">para_num_index</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">summation_flag</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="n">summation_index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>中间一定会有很多小bug，需要我们在硬件上查看现象的时候才会发现，我们一开始只会写一些逻辑和常见的小错误点，但是基本不可能一次成功，所以要经常进行测试调试</p>
+</blockquote>
+<h3 id="led功能实现"><strong>led功能实现</strong>
+</h3><ul>
+<li>led的闪烁，整个都是在main文件里实现的，另外注意，<strong>闪烁的条件是在定时器中断函数里实现的</strong></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">idata</span> <span class="n">unsigned</span> <span class="n">char</span> <span class="n">time_100ms</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">bit</span> <span class="n">led_blink_flag</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">......</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">void</span> <span class="n">Led_Proc</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">ucLed</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">seg_show_mode</span> <span class="o">==</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">switch</span> <span class="p">(</span><span class="n">range_show_mode</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="o">/*</span> <span class="err">关闭</span><span class="o">/</span><span class="err">待机</span> <span class="o">*/</span>
+</span></span><span class="line"><span class="cl">		<span class="n">ucLed</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="o">/*</span> <span class="err">单次测量</span> <span class="o">*/</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="n">signal_flag</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>   <span class="o">//</span><span class="err">是否已经执行完成</span>
+</span></span><span class="line"><span class="cl">			<span class="n">ucLed</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">distance</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">distance</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="o">/*</span> <span class="err">累加测量</span> <span class="o">*/</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="n">summation_flag</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="n">ucLed</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">distance_sum</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">distance_sum</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="n">ucLed</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">led_blink_flag</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Led_Disp</span><span class="p">(</span><span class="n">ucLed</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">......</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">void</span> <span class="n">Timer1_Isr</span><span class="p">(</span><span class="n">void</span><span class="p">)</span> <span class="n">interrupt</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">uwtick</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">seg_pos</span> <span class="o">=</span> <span class="p">(</span><span class="o">++</span><span class="n">seg_pos</span><span class="p">)</span> <span class="o">%</span> <span class="mi">8</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">seg_buf</span><span class="p">[</span><span class="n">seg_pos</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Seg_Disp</span><span class="p">(</span><span class="n">seg_pos</span><span class="p">,</span> <span class="n">seg_buf</span><span class="p">[</span><span class="n">seg_pos</span><span class="p">]</span> <span class="o">-</span> <span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Seg_Disp</span><span class="p">(</span><span class="n">seg_pos</span><span class="p">,</span> <span class="n">seg_buf</span><span class="p">[</span><span class="n">seg_pos</span><span class="p">],</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">	<span class="o">//</span> <span class="n">LED闪烁控制</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">summation_flag</span><span class="p">)</span>  <span class="o">//</span><span class="err">如果处于累加状态时</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="o">++</span><span class="n">time_100ms</span> <span class="o">&gt;=</span> <span class="mi">100</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">time_100ms</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="n">led_blink_flag</span> <span class="o">^=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">time_100ms</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">led_blink_flag</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>有一个很重要的点就是，当你想要对某个状态或者某个数据进行显示的时候，这个状态是否已经完成，或者这个数据是否已经传输完毕，都需要提前做好限制</strong></li>
+</ul>
+<h3 id="dac功能实现"><strong>DAC功能实现</strong>
+</h3><ul>
+<li><strong>先搭框架，再填逻辑</strong></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">void</span> <span class="n">DA_Proc</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="ne">float</span> <span class="n">temp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">switch</span> <span class="p">(</span><span class="n">range_show_mode</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="o">/*</span> <span class="err">关闭</span><span class="o">/</span><span class="err">待机</span> <span class="o">*/</span>
+</span></span><span class="line"><span class="cl">		<span class="n">temp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="o">/*</span> <span class="err">单次测量</span> <span class="o">*/</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="n">signal_flag</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="p">(</span><span class="n">distance</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">				<span class="n">temp</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">distance</span> <span class="o">&gt;=</span> <span class="mi">100</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">				<span class="n">temp</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="k">else</span>
+</span></span><span class="line"><span class="cl">				<span class="n">temp</span> <span class="o">=</span> <span class="p">(</span><span class="ne">float</span><span class="p">)</span><span class="n">distance</span> <span class="o">/</span> <span class="mf">20.0</span><span class="n">f</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="o">/*</span> <span class="err">累加测量</span> <span class="o">*/</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="n">summation_flag</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="p">(</span><span class="n">distance_sum</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">				<span class="n">temp</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">distance_sum</span> <span class="o">&gt;=</span> <span class="mi">100</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">				<span class="n">temp</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="k">else</span>
+</span></span><span class="line"><span class="cl">				<span class="n">temp</span> <span class="o">=</span> <span class="p">(</span><span class="ne">float</span><span class="p">)</span><span class="n">distance_sum</span> <span class="o">/</span> <span class="mf">20.0</span><span class="n">f</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Da_Write</span><span class="p">(</span><span class="n">temp</span> <span class="o">*</span> <span class="mi">51</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="温度功能实现"><strong>温度功能实现</strong>
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">void Get_Temperature()
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">	float temp = 0;
+</span></span><span class="line"><span class="cl">	temp = Rd_Temperature();
+</span></span><span class="line"><span class="cl">	temperature = temp;
+</span></span><span class="line"><span class="cl">	speed = 330 + 0.6f * temp;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="总结">总结
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>模块</th>
+          <th style="text-align: center">难度</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>超声波测距</td>
+          <td style="text-align: center">★★★</td>
+          <td>PCA 计时 + 温度补偿声速</td>
+      </tr>
+      <tr>
+          <td>累加测量状态机</td>
+          <td style="text-align: center">★★★★★</td>
+          <td>本题最大难点，状态转换多，边界条件复杂</td>
+      </tr>
+      <tr>
+          <td>DAC 线性映射</td>
+          <td style="text-align: center">★★</td>
+          <td>公式推导 + 分段处理</td>
+      </tr>
+      <tr>
+          <td>参数往复切换</td>
+          <td style="text-align: center">★★</td>
+          <td>理解往复 vs 循环的区别</td>
+      </tr>
+      <tr>
+          <td>界面显示管理</td>
+          <td style="text-align: center">★★★</td>
+          <td>三个界面 + 多种显示状态</td>
+      </tr>
+      <tr>
+          <td>LED 状态控制</td>
+          <td style="text-align: center">★★★</td>
+          <td>L2 累加中不变 + L3 定时闪烁</td>
+      </tr>
+      <tr>
+          <td>按键屏蔽逻辑</td>
+          <td style="text-align: center">★★★★</td>
+          <td>不同界面/状态下的互斥规则多</td>
+      </tr>
+      <tr>
+          <td>整体调度架构</td>
+          <td style="text-align: center">★★★</td>
+          <td>多任务协调，阻塞操作的影响</td>
+      </tr>
+  </tbody>
+</table></div>
+<ol>
+<li><strong>先搭框架</strong>：任务调度器 + 界面切换 + 数码管显示（基础分）</li>
+<li><strong>再做温度和单次测距</strong>：DS18B20 + 超声波单次（中等分）</li>
+<li><strong>然后做 DAC 和 LED</strong>：输出控制（稳定分）</li>
+<li><strong>最后攻克累加测量</strong>：状态机 + 按键屏蔽（高分区）</li>
+</ol>
+
 </section>
 
 

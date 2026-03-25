@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://example.com/</loc>
-    <lastmod>2026-03-22T00:00:00+00:00</lastmod>
+    <lastmod>2026-03-25T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -21,7 +21,7 @@
                 />
   </url><url>
     <loc>https://example.com/categories/</loc>
-    <lastmod>2026-03-22T00:00:00+00:00</lastmod>
+    <lastmod>2026-03-25T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -39,10 +39,10 @@
                 />
   </url><url>
     <loc>https://example.com/post/</loc>
-    <lastmod>2026-03-22T00:00:00+00:00</lastmod>
+    <lastmod>2026-03-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://example.com/tags/</loc>
-    <lastmod>2026-03-22T00:00:00+00:00</lastmod>
+    <lastmod>2026-03-25T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -59,6 +59,15 @@
                 href="https://example.com/tags/"
                 />
   </url><url>
+    <loc>https://example.com/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/</loc>
+    <lastmod>2026-03-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/</loc>
+    <lastmod>2026-03-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://example.com/p/%E7%AC%AC%E5%8D%81%E5%85%AD%E5%B1%8A%E7%9C%81%E8%B5%9B%E9%A2%98%E7%9B%AE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2026-03-25T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://example.com/p/%E7%BA%AF%E7%A1%AC%E4%BB%B6%E5%BE%AA%E8%BF%B9%E5%B0%8F%E8%BD%A6/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
@@ -67,9 +76,6 @@
   </url><url>
     <loc>https://example.com/tags/%E5%B0%8F%E7%8E%A9%E5%85%B7/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://example.com/p/%E5%85%A8%E6%B5%81%E7%A8%8B%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2026-03-21T20:57:26+08:00</lastmod>
   </url><url>
     <loc>https://example.com/p/%E6%97%A5%E5%BF%97%E4%B9%A6%E5%86%99%E6%B5%81%E7%A8%8B/</loc>
     <lastmod>2026-03-21T20:57:26+08:00</lastmod>

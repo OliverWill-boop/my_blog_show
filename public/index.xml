@@ -7,7 +7,710 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Wed, 25 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 26 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>AI调试技巧</title>
+        <link>https://example.com/p/ai%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/</link>
+        <pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/ai%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/</guid>
+        <description>&lt;h1 id=&#34;ai调试技巧&#34;&gt;AI调试技巧
+&lt;/h1&gt;&lt;h2 id=&#34;前置认知&#34;&gt;前置认知
+&lt;/h2&gt;&lt;h3 id=&#34;vibecoding-的核心理念&#34;&gt;Vibecoding 的核心理念
+&lt;/h3&gt;&lt;p&gt;Vibecoding = Prompt（提示词） + Workflow（工具流）&lt;/p&gt;
+&lt;p&gt;Prompt 告诉 AI&lt;strong&gt;做什么&lt;/strong&gt;Workflow 决定&lt;strong&gt;怎么做&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你需要做的&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;清楚描述任务目标&lt;/li&gt;
+&lt;li&gt;提供必要的上下文&lt;/li&gt;
+&lt;li&gt;验证结果并反馈&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;不需要做&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;❌ 指定具体步骤（&amp;ldquo;先读文件A，再读文件B&amp;rdquo;）&lt;/li&gt;
+&lt;li&gt;❌ 告诉它用哪个工具（&amp;ldquo;用 Read 工具读取&amp;rdquo;）&lt;/li&gt;
+&lt;li&gt;❌ 手动组合命令（&amp;ldquo;运行 git add 然后 git commit&amp;rdquo;）&lt;/li&gt;
+&lt;li&gt;❌ 手动处理错误（&amp;ldquo;如果失败就重试&amp;rdquo;）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;不要告诉AI实现目标的具体路径，它会自行探索，请相信，它能找到的方案一定比你脑子里的多。我们要做的就是提供具体的目标，提供详细的背景，然后选择AI探索出的方案，验证结果并加以反馈&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260326211045005.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260326211045005&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;vibecoding-的核心哲学你是导演ai-是演员&#34;&gt;VibeCoding 的核心哲学：你是导演，AI 是演员
+&lt;/h3&gt;&lt;p&gt;VibeCoding 的核心不是&amp;quot;让 AI 替你写代码&amp;quot;，而是&amp;quot;你驾驭 AI 写代码&amp;quot;。这个区别至关重要。如果你把 AI 当成替代品，你会逐渐失去对产品的控制权，最终做出的东西可能技术上完美，但产品上平庸。真正强大的用法是&amp;quot;一放一收&amp;quot;：放，是让 AI 在海量技术方案中自由探索，生成多种实现路径，帮你看到你原本看不到的可能性；收，是你在关键节点选定方向、拍板决策、承担责任。&lt;/p&gt;
+&lt;p&gt;你的作品价值不在于代码量有多大、技术栈有多新，而在于它体现了你选定的产品方向、你做出的架构判断、你愿意为此承担的责任。AI 可以帮你写出一万行代码，但只有你能决定这一万行代码应该解决什么问题。这就是为什么 PRD 如此重要——PRD 就是你对 AI 的&amp;quot;控制权&amp;quot;。没有 PRD，AI 是脱缰的野马，可能跑得很快但方向不对；有了 PRD，AI 是听话的执行者，它的每一步都在你的掌控之中。&lt;/p&gt;
+&lt;h3 id=&#34;ai-与人的分工预测与判断&#34;&gt;AI 与人的分工：预测与判断
+&lt;/h3&gt;&lt;p&gt;在 VibeCoding 工作流中，理解 AI 和人的分工至关重要。AI 负责的是&amp;quot;预测&amp;quot;——它会基于海量的训练数据，生成多种代码方案、提供架构建议、推荐技术选型。这些方案通常是概率最高的、最符合最佳实践的选择。但 AI 不知道你的业务场景、不了解你的用户需求、也无法为产品方向负责。&lt;/p&gt;
+&lt;p&gt;这就是你的价值所在。你负责的是&amp;quot;判断&amp;quot;——在 AI 给出的多个方案中选择最适合的那个，基于你对业务的理解决定是否接受某段代码，基于你对用户需求的洞察决定产品往哪个方向走。这不是因为 AI 能力不足，而是因为分工本就如此：AI 擅长基于数据做预测，你擅长基于理解做判断。&lt;/p&gt;
+&lt;p&gt;权限模式（Default/Plan/Accept Edits）本质上就是在调节&amp;quot;预测与判断的脱钩程度&amp;quot;。Default 模式下，AI 的只读探索自动执行，但修改代码时需要你判断；Plan 模式下，AI 只能探索和分析，所有判断都由你做；Accept Edits 模式下，AI 可以自主运行命令和测试，但修改代码时仍需你判断。选择哪种模式，取决于你对当前任务的熟悉程度和风险承受能力。&lt;/p&gt;
+&lt;h3 id=&#34;agent-native-的三大原则&#34;&gt;Agent Native 的三大原则
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260326210545546.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260326210545546&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;意图驱动&#34;&gt;&lt;strong&gt;意图驱动&lt;/strong&gt;
+&lt;/h4&gt;&lt;p&gt;告诉 AI 目标，让它自己决定实现方式：&lt;/p&gt;
+&lt;p&gt;bash&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;❌ 传统思维：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;帮我写一个函数，接收数组参数，用 for 循环遍历，
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;遇到大于 10 的就 push 到新数组里...&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;✅ Agent Native：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;过滤数组中大于 10 的元素，返回新数组&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;异步协作&#34;&gt;&lt;strong&gt;异步协作&lt;/strong&gt;
+&lt;/h4&gt;&lt;p&gt;AI 可以在你睡觉时工作：&lt;/p&gt;
+&lt;p&gt;bash&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 你设定目标，AI 自主执行
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;实现用户评论功能，包括：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1. 数据库 schema（Comment 模型）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2. CRUD API
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3. 前端评论表单
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;4. 评论列表展示
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;完成后告诉我，我先去忙别的。&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;信任但验证&#34;&gt;&lt;strong&gt;信任但验证&lt;/strong&gt;
+&lt;/h4&gt;&lt;p&gt;不要逐行检查 AI 的代码，而是：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/AppData/Roaming/Typora/typora-user-images/image-20260326210654189.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260326210654189&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;验证方式&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;功能测试：跑一下看看能不能用&lt;/li&gt;
+&lt;li&gt;类型检查：&lt;code&gt;tsc&lt;/code&gt; 有没有报错&lt;/li&gt;
+&lt;li&gt;代码审查：只看关键逻辑，不看实现细节&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;从开发者到编排者&#34;&gt;从开发者到编排者
+&lt;/h3&gt;&lt;img src=&#34;https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260326210811511.png&#34; alt=&#34;image-20260326210811511&#34; style=&#34;zoom: 50%;&#34; /&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;传统开发者&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;Agent Native 编排者&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;手写代码&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;描述需求&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;逐个修复&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;反馈问题&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;关注语法&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;关注产品&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;是工匠&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;是指挥官&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;记住&lt;/strong&gt;：代码是实现细节，产品才是目的。Agent Native 让你从&amp;quot;怎么做&amp;quot;中解放出来，专注于&amp;quot;做什么&amp;quot;。&lt;/p&gt;
+&lt;h2 id=&#34;提示词的核心原则prompt&#34;&gt;提示词的核心原则（prompt）
+&lt;/h2&gt;&lt;p&gt;AI 是一个强大的编程助手，它理解技术术语、熟悉各种框架、能快速分析代码。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;沟通的关键是：直接、具体、有上下文。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;❌ &lt;strong&gt;绕弯子&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;你是一位资深的全栈工程师，精通各种技术栈...&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;→ AI 不需要角色扮演，它知道自己能做什么&lt;/p&gt;
+&lt;p&gt;✅ &lt;strong&gt;直接说事&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;检测这个 React 组件的类型安全问题&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;→ 一句话讲清楚要做什么&lt;/p&gt;
+&lt;p&gt;❌ &lt;strong&gt;模糊描述&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;帮我优化一下代码&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;→ AI 不知道优化什么方向&lt;/p&gt;
+&lt;p&gt;✅ &lt;strong&gt;具体需求&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;优化登录页面的加载性能：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1. 添加图片懒加载
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2. 延迟加载非关键资源
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3. 使用 Next.js 的动态导入&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;→ 明确优化目标和实现方式&lt;/p&gt;
+&lt;h3 id=&#34;提示词原则&#34;&gt;提示词原则
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260326211328776.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260326211328776&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;提示词对比欠佳-vs-推荐&#34;&gt;提示词对比：欠佳 vs 推荐
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;类型&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;欠佳&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;推荐&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;角色扮演&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&amp;ldquo;你是一位拥有 20 年经验的全栈工程师，精通 React、Vue、Angular、Node.js、Python&amp;hellip;&amp;rdquo;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;直接说任务：&amp;ldquo;实现用户登录功能&amp;rdquo;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;模糊指令&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&amp;ldquo;帮我优化一下代码&amp;rdquo;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&amp;ldquo;优化登录页面的加载性能：添加图片懒加载、延迟加载非关键资源&amp;rdquo;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;无边界限制&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&amp;ldquo;写一个完整的电商系统&amp;rdquo;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&amp;ldquo;实现用户评论功能，包括：评论表单、列表展示、数据持久化&amp;rdquo;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;强行要求&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&amp;ldquo;你必须给出正确答案，不能说不知道&amp;rdquo;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&amp;ldquo;如果不确定，请明确说&amp;rsquo;我不确定&amp;rsquo;，而不是编造答案&amp;rdquo;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;具体任务&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&amp;ldquo;帮我写一个登录功能&amp;rdquo;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&amp;ldquo;实现用户登录功能：用户名+密码登录，使用 Next.js 16 App Router，Drizzle ORM + PostgreSQL，包含表单验证和错误处理&amp;rdquo;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;提供上下文&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&amp;ldquo;修复这个 Bug&amp;rdquo;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&amp;ldquo;修复 Bug：文件 app/login/page.tsx，问题：用户登录后没有跳转到首页，预期：跳转到 /dashboard&amp;rdquo;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;指令要具体&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&amp;ldquo;添加测试&amp;rdquo;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&amp;ldquo;为 app/login/page.tsx 编写测试用例，框架：Playwright，覆盖场景：密码错误、账号不存在、网络错误&amp;rdquo;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;核心原则&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不要让 AI 猜 → 提供明确上下文&lt;/li&gt;
+&lt;li&gt;不要含糊其辞 → 给出具体要求&lt;/li&gt;
+&lt;li&gt;不要强行编造 → 给 AI 一个&amp;quot;不确定&amp;quot;的出口&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;让-ai-反复提问&#34;&gt;让 AI 反复提问
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;我要开发一个任务管理应用。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;请反复问我问题，直到你完全理解我的需求。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;不要猜测，直接问。&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;五步工作流workflow&#34;&gt;五步工作流（workflow）
+&lt;/h2&gt;&lt;h3 id=&#34;探索项目结构详细说明背景&#34;&gt;探索项目结构（详细说明背景）
+&lt;/h3&gt;&lt;p&gt;先了解项目现状，能在 prompt 中给出更精准的上下文——比如&amp;quot;项目已有 Comment 表，请复用&amp;quot;、&amp;ldquo;代码风格参考 src/modules/posts&amp;rdquo;。上下文越明确，AI 的输出越贴合你的项目。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;先探索，再动手&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;探索这个项目的结构，告诉我:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1. 使用的技术栈
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2. 文件组织方式
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3. 现有的功能模块
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;4. 配置文件的作用&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;你会得到&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;项目使用 Next.js 16 + TypeScript + Drizzle
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- app/: 页面和 API
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- components/: 可复用组件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- src/db/: 数据库模型（已有 User 表，可关联）
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;关键信息&lt;/strong&gt;：已有 User 表 → 直接关联，省去建表 + 10 分钟。&lt;/p&gt;
+&lt;h3 id=&#34;规划实现步骤详细说明需求&#34;&gt;规划实现步骤（详细说明需求）
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;目的&lt;/strong&gt;: 先想清楚再动手，减少返工&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;我要添加用户评论功能。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;请规划实现步骤，包括:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1. 需要创建哪些文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2. 需要修改哪些现有文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3. 数据库 schema 变更
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;4. 实现顺序&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;输出示例&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;步骤:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1. 更新 Drizzle schema (添加 Comment 模型)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2. 运行 npx drizzle-kit push
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3. 创建 API route (app/api/comments/route.ts)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;4. 创建评论组件 (components/CommentForm.tsx)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;5. 集成到详情页
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;编写代码让ai自动执行&#34;&gt;编写代码（让AI自动执行）
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;目的&lt;/strong&gt;：按计划实现功能&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;AI 的自动拆分能力&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;复杂任务会被自动拆解：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 你只需要说
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;实现用户评论功能&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# AI 会自动拆分为：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1. 更新 Drizzle schema
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2. 运行数据库迁移
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3. 创建 API 端点
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;4. 编写前端组件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;5. 集成到页面
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;6. 测试验证
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;你不需要手动指定每个步骤，AI 会：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;识别任务依赖关系&lt;/li&gt;
+&lt;li&gt;确定执行顺序&lt;/li&gt;
+&lt;li&gt;并行处理独立部分&lt;/li&gt;
+&lt;li&gt;验证每个步骤的结果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;当然，你也可以分步执行&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;按照步骤 1，更新 Drizzle schema&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;按照步骤 2，生成并运行迁移&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;按照步骤 3，创建评论 API&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;测试验证&#34;&gt;测试验证
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;目的&lt;/strong&gt;：确保功能正常&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;测试评论功能:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1. 验证 API 能正常创建评论
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2. 验证评论能正确显示
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3. 验证错误处理&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;提交代码包括git管理&#34;&gt;提交代码（包括git管理）
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;场景：AI 改崩了代码，想回退&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;AI 为了修一个 Bug，改了 10 个文件，结果功能全乱了。你想回退，但发现没有存档点。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：让 AI &lt;strong&gt;自动提交代码&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;配置方法&lt;/strong&gt;：在 CLAUDE.md 中添加：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;每当你完成一个独立功能的开发，或修复完一个 Bug 并验证通过后，请自动运行 git commit 提交代码，并生成一句简洁的中文 commit message。&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;效果&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AI 写完登录功能 → 自动 &lt;code&gt;git commit -m &amp;quot;feat: 实现登录&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;AI 写完首页 → 自动 &lt;code&gt;git commit -m &amp;quot;feat: 添加首页&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;AI 搞崩了代码 → &lt;code&gt;git log&lt;/code&gt; 找到上一个版本，&lt;code&gt;git reset&lt;/code&gt; 回退&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;自动提交 vs 检查点&lt;/strong&gt;：&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;方式&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;能回滚什么&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;不能回滚什么&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;适用场景&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;检查点&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;AI 写入的文件&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;终端命令产生的变更&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;快速回退&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Git 提交&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;所有已跟踪文件&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;未跟踪文件&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;重要里程碑&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;建议&lt;/strong&gt;：两者都用。检查点用于快速试错，Git 提交用于重要节点。&lt;/p&gt;
+&lt;h4 id=&#34;检查点功能&#34;&gt;检查点功能
+&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;场景：代码改崩了，想回滚&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;你让 AI 重构代码，结果功能全乱了。按 &lt;code&gt;Esc+Esc&lt;/code&gt;，选择之前的检查点，代码恢复。松了口气。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;但注意检查点的局限&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;你用 &lt;code&gt;/rewind&lt;/code&gt; 回滚到早期版本，然后 &lt;code&gt;ls&lt;/code&gt; 一看——&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;index.html&lt;/code&gt; 恢复了 ✓&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;node_modules/&lt;/code&gt; 还在（AI 删不了）&lt;/li&gt;
+&lt;li&gt;数据库表也还在（AI 动不了）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：检查点只回滚 AI &lt;strong&gt;写入的文件&lt;/strong&gt;，终端命令（&lt;code&gt;npm install&lt;/code&gt;、&lt;code&gt;mkdir&lt;/code&gt;）产生的变更无法回滚。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;正确姿势&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;小改动 → 检查点快速回滚&lt;/li&gt;
+&lt;li&gt;大改动 → &lt;code&gt;git commit&lt;/code&gt; 后再让 AI 动手&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;使用方法&lt;/strong&gt;： 按 &lt;code&gt;Esc+Esc&lt;/code&gt; 或 &lt;code&gt;/rewind&lt;/code&gt;，选择：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;仅对话：回退消息，保留代码&lt;/li&gt;
+&lt;li&gt;仅代码：恢复文件，保留对话&lt;/li&gt;
+&lt;li&gt;两者都恢复&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;一些简单小技巧和模板&#34;&gt;一些简单小技巧和模板
+&lt;/h2&gt;&lt;h3 id=&#34;提问模板&#34;&gt;提问模板
+&lt;/h3&gt;&lt;h4 id=&#34;最简单提问模板&#34;&gt;最简单提问模板
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;我刚刚在做：[你刚刚做了什么]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;现在出现的问题是：[你现在看到的现象]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;我原本希望得到的结果是：[你想达到什么效果]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;请先帮我判断最可能的原因，再告诉我下一步该怎么做。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;代码生成模板&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;实现 [功能名称]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;技术栈：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- Next.js [版本]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- TypeScript
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- Drizzle ORM
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- [其他技术]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;需求：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1. [具体需求1]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2. [具体需求2]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3. [具体需求3]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;注意事项：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- 遵循项目现有代码风格
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- 不要引入新依赖，除非必要
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- 包含错误处理&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;bug-修复模板&#34;&gt;Bug 修复模板
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;修复 Bug
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;文件路径: [完整路径]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;错误信息:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[完整报错日志]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;当前代码:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[相关代码片段]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;期望行为: [描述]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;实际行为: [描述]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;请分析原因并提供修复方案&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;如果第一次没解决怎么办&#34;&gt;如果第一次没解决怎么办
+&lt;/h3&gt;&lt;p&gt;第一次没解决，不代表你就失败了。很多问题本来就不是“一问就结束”，而是一个小迭代。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260326205658650.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260326205658650&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;更好的做法是，把新的现象告诉 AI，说明你刚刚按它的建议做了什么，然后继续推进下一轮判断。&lt;/p&gt;
+&lt;h3 id=&#34;什么信息最值得补充&#34;&gt;什么信息最值得补充
+&lt;/h3&gt;&lt;p&gt;如果第一次回答还不够，你下一步最值得补的，通常就是截图、完整报错原文、你刚刚改了哪个部分，以及你现在看到的结果和预期差在哪里。&lt;/p&gt;
+&lt;p&gt;不要只说“它不对”“它坏了”“还是不行”。这类信息太少，AI 也很难帮你判断。&lt;/p&gt;
+&lt;h4 id=&#34;提示词自检清单&#34;&gt;提示词自检清单
+&lt;/h4&gt;&lt;p&gt;发送提示词前检查：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;任务描述清晰具体&lt;/li&gt;
+&lt;li&gt;提供了必要的上下文&lt;/li&gt;
+&lt;li&gt;明确了输出格式&lt;/li&gt;
+&lt;li&gt;给了 AI&amp;quot;不确定&amp;quot;的出口&lt;/li&gt;
+&lt;li&gt;包含了必要的约束条件&lt;/li&gt;
+&lt;li&gt;避免了冗长的角色设定&lt;/li&gt;
+&lt;li&gt;没有包含敏感信息（API Key、密码等）&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>单片机概述</title>
+        <link>https://example.com/p/%E5%8D%95%E7%89%87%E6%9C%BA%E6%A6%82%E8%BF%B0/</link>
+        <pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/%E5%8D%95%E7%89%87%E6%9C%BA%E6%A6%82%E8%BF%B0/</guid>
+        <description>&lt;h1 id=&#34;单片机概述&#34;&gt;单片机概述
+&lt;/h1&gt;&lt;h2 id=&#34;学单片机到底在学什么&#34;&gt;学单片机到底在学什么？
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;常见的控制设备，包括灯泡、马达、各类传感器、按键、触摸屏、无线通信芯片等等，所有的设备都是通过引脚的通电和不通电控制的，不同设备控制的方法不同，区别就是使用引脚数量、通电不通电的时长、间隔。
+单片机独立存在没有意义，因为没有其他设备它什么都做不了，学习单片机说白了，就是学习如何按照不同设备的手册，通过编写代码控制单片机引脚的通电和断电，进而控制其他设备。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260326214856021.png&#34; alt=&#34;image-20260326214856021&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;arm&#34;&gt;ARM
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;ARM是一种处理器架构，&lt;/li&gt;
+&lt;li&gt;处理器架构是处理器(CPU/GPU等)的底层设计规则与硬件组织方式，核心定义了指令集、寄存器、数据通路、存储层次等关键组件的交互逻辑，相当于处理器的“设计蓝图”和&amp;quot;语言体系”。
+其本质是软硬件的接口标准:软件通过架构定义的指令集(如x86、ARM、RISC-V)向硬件发送指令，硬件则按架构规定的逻辑执行运算、存储数据，直接决定处理器的性能、功耗、兼容性和适用场景。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;处理器processor&#34;&gt;处理器(Processor)
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;处理器(Processor)也称中央处理器(Central Processing Unit,CPU)，是计算机的大脑，负责执行指令、进行算术逻辑运算，控制数据流和处理系统中的各种任务。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;STM32芯片中使用了ARM公司设计的Cortex-M处理器，如上图绿色部分，该处理器内部主要包含3个模块，内核、中断控制器、调试接口。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;这3个模块都和程序运行相关，内核是按顺序执行程序的;中断控制器可以改变程序的执行顺序;调试接口可以暂停执行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cortex-M是一系列微处理器的统称，主要包括M0、M3、M4、M23、M33等，从低到高，功能和性能逐渐复杂。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;内核(Core)是处理器的主要组成部分，其功能是读取、执行我们编写的代码，比如加、减、乘、除运算，if条件判断、for循环等的执行，都是由处理器完成的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;指令集instruction-set&#34;&gt;指令集Instruction Set
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;指令集(Instruction Set)是处理器架构定义的一组机器指令的集合，用于定义计算机可以执行的操作。&lt;/li&gt;
+&lt;li&gt;每种处理器架构都有自己特定的指令集，其中每条指令对应于一个特定的操作，例如算术运算、逻辑运算、内存访问等。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>图灵完备——第一节</title>
+        <link>https://example.com/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E7%AC%AC%E4%B8%80%E8%8A%82/</link>
+        <pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E7%AC%AC%E4%B8%80%E8%8A%82/</guid>
+        <description>&lt;h1 id=&#34;图灵完备第一节&#34;&gt;图灵完备——第一节
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;这并非数电的系统学习，其中描述也多有不当，只是个人为了通关《图灵完备》所学习的必要知识，一切以游戏为中心&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;逻辑代数基本公式&#34;&gt;逻辑代数基本公式
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;或是加法，与是乘法，或是求并集，与是求交集&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260326221737531.png&#34; alt=&#34;image-20260326221737531&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;非0都是1&lt;/li&gt;
+&lt;li&gt;注意红框圈出来的德摩根定律，长横变短横，乘法变加法，反过来一样。但其实，游戏中，有对德摩根定律在门电路上的另一种诠释：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260326222051775.png&#34; alt=&#34;image-20260326222051775&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;如何通过真值表写出逻辑表达式&#34;&gt;如何通过真值表写出逻辑表达式
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;找“1”法&lt;/strong&gt;，非常简单&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260326222347185.png&#34; alt=&#34;image-20260326222347185&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;如何根据逻辑表达式写出真值表&#34;&gt;如何根据逻辑表达式写出真值表
+&lt;/h2&gt;&lt;img src=&#34;https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260326222656254.png&#34; alt=&#34;image-20260326222656254&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;先写出所有可能，然后逻辑表达式涉及的都填1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;卡诺图化简&#34;&gt;卡诺图化简
+&lt;/h2&gt;&lt;img src=&#34;https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260326223006062.png&#34; alt=&#34;image-20260326223006062&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h3 id=&#34;用卡诺图表示出逻辑函数&#34;&gt;用卡诺图表示出逻辑函数
+&lt;/h3&gt;&lt;img src=&#34;https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260326223345260.png&#34; alt=&#34;image-20260326223345260&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;逻辑表达式中出现的都填1，其余填0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;用卡诺图化简&#34;&gt;用卡诺图化简
+&lt;/h3&gt;&lt;img src=&#34;https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260326223502593.png&#34; alt=&#34;image-20260326223502593&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;遵循以上原则的前提下，把各个圈加起来&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>蓝桥杯第十六届省赛题目学习笔记</title>
         <link>https://example.com/p/%E7%AC%AC%E5%8D%81%E5%85%AD%E5%B1%8A%E7%9C%81%E8%B5%9B%E9%A2%98%E7%9B%AE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
         <pubDate>Wed, 25 Mar 2026 00:00:00 +0000</pubDate>
@@ -123,8 +826,33 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;记得用seg_buf[]来存放显示数据，然后在定时器中断里用seg_pos做动态扫描，解决&lt;strong&gt;数码管动态显示&lt;/strong&gt;的问题&lt;/li&gt;
+&lt;li&gt;封装的时候注意，seg_proc里只放逻辑，底层封装在定时器的中断里，并且使用&lt;strong&gt;定时器1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;注意配置定时器1的时候，要手动添加两行代码&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;进行数码管测试的时候，不要忘了，在main中调用一下定时器1初始化函数，要不然，莫有现象&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;调度器书写&#34;&gt;&lt;strong&gt;调度器书写&lt;/strong&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;void main()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	Timer1Init();
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	while(1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;调度器书写&#34;&gt;&lt;strong&gt;调度器书写&lt;/strong&gt;
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;因为现在已经写了两个外设了，所以现在把调度器写上去&lt;/li&gt;
 &lt;/ul&gt;
@@ -398,6 +1126,35 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;一定要注意main函数中的初始化函数的顺序，要不然会导致蜂鸣器爆响&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;void main()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	System_Init();   //先系统初始化
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	Scheduler_Init();   //再调度器初始化
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	Timer1Init();   //在定时器初始化
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	while(1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		Scheduler_Run();
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;onewire代码书写温度传感器模块&#34;&gt;&lt;strong&gt;onewire代码书写（温度传感器模块）&lt;/strong&gt;
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -591,6 +1348,7 @@
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;超声波的底层还是比较复杂的，所以我把整个文件都放在这里&lt;/li&gt;
 &lt;li&gt;然后就是和前面一样，定义一个距离的变量，然后封装一个get_distance函数，然后放进调度器里，然后再进行一下测试&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;经常出现的错误是“模块的头文件忘记引用和忘记把模块加入调度器任务列表清单之中”&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;iic代码书写ad模块&#34;&gt;&lt;strong&gt;iic代码书写（AD模块）&lt;/strong&gt;
 &lt;/h3&gt;&lt;ul&gt;
@@ -1331,6 +2089,22 @@
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
         <guid>https://example.com/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://example.com/p/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://example.com/p/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/</guid>
         <description></description>
         </item>
         <item>

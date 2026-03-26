@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>单片机 on 告白火山的个人博客</title>
+        <link>https://example.com/categories/%E5%8D%95%E7%89%87%E6%9C%BA/</link>
+        <description>Recent content in 单片机 on 告白火山的个人博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>Example Person</copyright>
+        <lastBuildDate>Thu, 26 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/categories/%E5%8D%95%E7%89%87%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>单片机概述</title>
+        <link>https://example.com/p/%E5%8D%95%E7%89%87%E6%9C%BA%E6%A6%82%E8%BF%B0/</link>
+        <pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/%E5%8D%95%E7%89%87%E6%9C%BA%E6%A6%82%E8%BF%B0/</guid>
+        <description>&lt;h1 id=&#34;单片机概述&#34;&gt;单片机概述
+&lt;/h1&gt;&lt;h2 id=&#34;学单片机到底在学什么&#34;&gt;学单片机到底在学什么？
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;常见的控制设备，包括灯泡、马达、各类传感器、按键、触摸屏、无线通信芯片等等，所有的设备都是通过引脚的通电和不通电控制的，不同设备控制的方法不同，区别就是使用引脚数量、通电不通电的时长、间隔。
+单片机独立存在没有意义，因为没有其他设备它什么都做不了，学习单片机说白了，就是学习如何按照不同设备的手册，通过编写代码控制单片机引脚的通电和断电，进而控制其他设备。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260326214856021.png&#34; alt=&#34;image-20260326214856021&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;arm&#34;&gt;ARM
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;ARM是一种处理器架构，&lt;/li&gt;
+&lt;li&gt;处理器架构是处理器(CPU/GPU等)的底层设计规则与硬件组织方式，核心定义了指令集、寄存器、数据通路、存储层次等关键组件的交互逻辑，相当于处理器的“设计蓝图”和&amp;quot;语言体系”。
+其本质是软硬件的接口标准:软件通过架构定义的指令集(如x86、ARM、RISC-V)向硬件发送指令，硬件则按架构规定的逻辑执行运算、存储数据，直接决定处理器的性能、功耗、兼容性和适用场景。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;处理器processor&#34;&gt;处理器(Processor)
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;处理器(Processor)也称中央处理器(Central Processing Unit,CPU)，是计算机的大脑，负责执行指令、进行算术逻辑运算，控制数据流和处理系统中的各种任务。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;STM32芯片中使用了ARM公司设计的Cortex-M处理器，如上图绿色部分，该处理器内部主要包含3个模块，内核、中断控制器、调试接口。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;这3个模块都和程序运行相关，内核是按顺序执行程序的;中断控制器可以改变程序的执行顺序;调试接口可以暂停执行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cortex-M是一系列微处理器的统称，主要包括M0、M3、M4、M23、M33等，从低到高，功能和性能逐渐复杂。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;内核(Core)是处理器的主要组成部分，其功能是读取、执行我们编写的代码，比如加、减、乘、除运算，if条件判断、for循环等的执行，都是由处理器完成的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;指令集instruction-set&#34;&gt;指令集Instruction Set
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;指令集(Instruction Set)是处理器架构定义的一组机器指令的集合，用于定义计算机可以执行的操作。&lt;/li&gt;
+&lt;li&gt;每种处理器架构都有自己特定的指令集，其中每条指令对应于一个特定的操作，例如算术运算、逻辑运算、内存访问等。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

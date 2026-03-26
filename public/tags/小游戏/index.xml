@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>小游戏 on 告白火山的个人博客</title>
+        <link>https://example.com/tags/%E5%B0%8F%E6%B8%B8%E6%88%8F/</link>
+        <description>Recent content in 小游戏 on 告白火山的个人博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>Example Person</copyright>
+        <lastBuildDate>Thu, 26 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/%E5%B0%8F%E6%B8%B8%E6%88%8F/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>图灵完备——第一节</title>
+        <link>https://example.com/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E7%AC%AC%E4%B8%80%E8%8A%82/</link>
+        <pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/%E5%9B%BE%E7%81%B5%E5%AE%8C%E5%A4%87%E7%AC%AC%E4%B8%80%E8%8A%82/</guid>
+        <description>&lt;h1 id=&#34;图灵完备第一节&#34;&gt;图灵完备——第一节
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;这并非数电的系统学习，其中描述也多有不当，只是个人为了通关《图灵完备》所学习的必要知识，一切以游戏为中心&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;逻辑代数基本公式&#34;&gt;逻辑代数基本公式
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;或是加法，与是乘法，或是求并集，与是求交集&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260326221737531.png&#34; alt=&#34;image-20260326221737531&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;非0都是1&lt;/li&gt;
+&lt;li&gt;注意红框圈出来的德摩根定律，长横变短横，乘法变加法，反过来一样。但其实，游戏中，有对德摩根定律在门电路上的另一种诠释：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260326222051775.png&#34; alt=&#34;image-20260326222051775&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;如何通过真值表写出逻辑表达式&#34;&gt;如何通过真值表写出逻辑表达式
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;找“1”法&lt;/strong&gt;，非常简单&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260326222347185.png&#34; alt=&#34;image-20260326222347185&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;如何根据逻辑表达式写出真值表&#34;&gt;如何根据逻辑表达式写出真值表
+&lt;/h2&gt;&lt;img src=&#34;https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260326222656254.png&#34; alt=&#34;image-20260326222656254&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;先写出所有可能，然后逻辑表达式涉及的都填1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;卡诺图化简&#34;&gt;卡诺图化简
+&lt;/h2&gt;&lt;img src=&#34;https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260326223006062.png&#34; alt=&#34;image-20260326223006062&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h3 id=&#34;用卡诺图表示出逻辑函数&#34;&gt;用卡诺图表示出逻辑函数
+&lt;/h3&gt;&lt;img src=&#34;https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260326223345260.png&#34; alt=&#34;image-20260326223345260&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;逻辑表达式中出现的都填1，其余填0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;用卡诺图化简&#34;&gt;用卡诺图化简
+&lt;/h3&gt;&lt;img src=&#34;https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260326223502593.png&#34; alt=&#34;image-20260326223502593&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;遵循以上原则的前提下，把各个圈加起来&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

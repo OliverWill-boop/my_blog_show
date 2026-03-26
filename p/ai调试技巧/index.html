@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="VibeCoding">
+<title>AI调试技巧</title>
+
+<link rel='canonical' href='https://example.com/p/ai%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/'>
+
+<link rel="stylesheet" href="/scss/style.min.6a692fd055deae459f2a9767f57f3855ba80cafd5041317f24f7360f6ca47cdf.css"><meta property='og:title' content="AI调试技巧">
+<meta property='og:description' content="VibeCoding">
+<meta property='og:url' content='https://example.com/p/ai%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/'>
+<meta property='og:site_name' content='告白火山的个人博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='VibeCoding' /><meta property='article:published_time' content='2026-03-26T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-03-26T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="AI调试技巧">
+<meta name="twitter:description" content="VibeCoding">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="/blog_img/%e5%be%ae%e4%bf%a1%e5%9b%be%e7%89%87_20260325190916_43_188.jpg" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">告白火山的个人博客</a></h1>
+            <h2 class="site-description">记录个人成长</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+                    
+                        <li id="i18n-switch">  
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                            <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
+                                
+                                    <option value="https://example.com/en/" >English</option>
+                                
+                                    <option value="https://example.com/" selected>中文</option>
+                                
+                                    <option value="https://example.com/ar/" >عربي</option>
+                                
+                            </select>
+                        </li>
+                    
+                
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#前置认知">前置认知</a>
+      <ol>
+        <li><a href="#vibecoding-的核心理念">Vibecoding 的核心理念</a></li>
+        <li><a href="#vibecoding-的核心哲学你是导演ai-是演员">VibeCoding 的核心哲学：你是导演，AI 是演员</a></li>
+        <li><a href="#ai-与人的分工预测与判断">AI 与人的分工：预测与判断</a></li>
+        <li><a href="#agent-native-的三大原则">Agent Native 的三大原则</a>
+          <ol>
+            <li><a href="#意图驱动"><strong>意图驱动</strong></a></li>
+            <li><a href="#异步协作"><strong>异步协作</strong></a></li>
+            <li><a href="#信任但验证"><strong>信任但验证</strong></a></li>
+          </ol>
+        </li>
+        <li><a href="#从开发者到编排者">从开发者到编排者</a></li>
+      </ol>
+    </li>
+    <li><a href="#提示词的核心原则prompt">提示词的核心原则（prompt）</a>
+      <ol>
+        <li><a href="#提示词原则">提示词原则</a></li>
+        <li><a href="#提示词对比欠佳-vs-推荐">提示词对比：欠佳 vs 推荐</a></li>
+        <li><a href="#让-ai-反复提问">让 AI 反复提问</a></li>
+      </ol>
+    </li>
+    <li><a href="#五步工作流workflow">五步工作流（workflow）</a>
+      <ol>
+        <li><a href="#探索项目结构详细说明背景">探索项目结构（详细说明背景）</a></li>
+        <li><a href="#规划实现步骤详细说明需求">规划实现步骤（详细说明需求）</a></li>
+        <li><a href="#编写代码让ai自动执行">编写代码（让AI自动执行）</a></li>
+        <li><a href="#测试验证">测试验证</a></li>
+        <li><a href="#提交代码包括git管理">提交代码（包括git管理）</a>
+          <ol>
+            <li><a href="#检查点功能">检查点功能</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#一些简单小技巧和模板">一些简单小技巧和模板</a>
+      <ol>
+        <li><a href="#提问模板">提问模板</a>
+          <ol>
+            <li><a href="#最简单提问模板">最简单提问模板</a></li>
+            <li><a href="#bug-修复模板">Bug 修复模板</a></li>
+          </ol>
+        </li>
+        <li><a href="#如果第一次没解决怎么办">如果第一次没解决怎么办</a></li>
+        <li><a href="#什么信息最值得补充">什么信息最值得补充</a>
+          <ol>
+            <li><a href="#提示词自检清单">提示词自检清单</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/vibecoding/" >
+                VibeCoding
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/ai%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/">AI调试技巧</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            VibeCoding
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 26, 2026</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 4 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="ai调试技巧">AI调试技巧
+</h1><h2 id="前置认知">前置认知
+</h2><h3 id="vibecoding-的核心理念">Vibecoding 的核心理念
+</h3><p>Vibecoding = Prompt（提示词） + Workflow（工具流）</p>
+<p>Prompt 告诉 AI<strong>做什么</strong>Workflow 决定<strong>怎么做</strong></p>
+<p><strong>你需要做的</strong>：</p>
+<ul>
+<li>清楚描述任务目标</li>
+<li>提供必要的上下文</li>
+<li>验证结果并反馈</li>
+</ul>
+<p><strong>不需要做</strong>：</p>
+<ul>
+<li>❌ 指定具体步骤（&ldquo;先读文件A，再读文件B&rdquo;）</li>
+<li>❌ 告诉它用哪个工具（&ldquo;用 Read 工具读取&rdquo;）</li>
+<li>❌ 手动组合命令（&ldquo;运行 git add 然后 git commit&rdquo;）</li>
+<li>❌ 手动处理错误（&ldquo;如果失败就重试&rdquo;）</li>
+</ul>
+<blockquote>
+<p>不要告诉AI实现目标的具体路径，它会自行探索，请相信，它能找到的方案一定比你脑子里的多。我们要做的就是提供具体的目标，提供详细的背景，然后选择AI探索出的方案，验证结果并加以反馈</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260326211045005.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image-20260326211045005"
+	
+	
+></p>
+<h3 id="vibecoding-的核心哲学你是导演ai-是演员">VibeCoding 的核心哲学：你是导演，AI 是演员
+</h3><p>VibeCoding 的核心不是&quot;让 AI 替你写代码&quot;，而是&quot;你驾驭 AI 写代码&quot;。这个区别至关重要。如果你把 AI 当成替代品，你会逐渐失去对产品的控制权，最终做出的东西可能技术上完美，但产品上平庸。真正强大的用法是&quot;一放一收&quot;：放，是让 AI 在海量技术方案中自由探索，生成多种实现路径，帮你看到你原本看不到的可能性；收，是你在关键节点选定方向、拍板决策、承担责任。</p>
+<p>你的作品价值不在于代码量有多大、技术栈有多新，而在于它体现了你选定的产品方向、你做出的架构判断、你愿意为此承担的责任。AI 可以帮你写出一万行代码，但只有你能决定这一万行代码应该解决什么问题。这就是为什么 PRD 如此重要——PRD 就是你对 AI 的&quot;控制权&quot;。没有 PRD，AI 是脱缰的野马，可能跑得很快但方向不对；有了 PRD，AI 是听话的执行者，它的每一步都在你的掌控之中。</p>
+<h3 id="ai-与人的分工预测与判断">AI 与人的分工：预测与判断
+</h3><p>在 VibeCoding 工作流中，理解 AI 和人的分工至关重要。AI 负责的是&quot;预测&quot;——它会基于海量的训练数据，生成多种代码方案、提供架构建议、推荐技术选型。这些方案通常是概率最高的、最符合最佳实践的选择。但 AI 不知道你的业务场景、不了解你的用户需求、也无法为产品方向负责。</p>
+<p>这就是你的价值所在。你负责的是&quot;判断&quot;——在 AI 给出的多个方案中选择最适合的那个，基于你对业务的理解决定是否接受某段代码，基于你对用户需求的洞察决定产品往哪个方向走。这不是因为 AI 能力不足，而是因为分工本就如此：AI 擅长基于数据做预测，你擅长基于理解做判断。</p>
+<p>权限模式（Default/Plan/Accept Edits）本质上就是在调节&quot;预测与判断的脱钩程度&quot;。Default 模式下，AI 的只读探索自动执行，但修改代码时需要你判断；Plan 模式下，AI 只能探索和分析，所有判断都由你做；Accept Edits 模式下，AI 可以自主运行命令和测试，但修改代码时仍需你判断。选择哪种模式，取决于你对当前任务的熟悉程度和风险承受能力。</p>
+<h3 id="agent-native-的三大原则">Agent Native 的三大原则
+</h3><p><img src="https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260326210545546.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image-20260326210545546"
+	
+	
+></p>
+<h4 id="意图驱动"><strong>意图驱动</strong>
+</h4><p>告诉 AI 目标，让它自己决定实现方式：</p>
+<p>bash</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">❌ 传统思维：
+</span></span><span class="line"><span class="cl">&#34;帮我写一个函数，接收数组参数，用 for 循环遍历，
+</span></span><span class="line"><span class="cl">遇到大于 10 的就 push 到新数组里...&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">✅ Agent Native：
+</span></span><span class="line"><span class="cl">&#34;过滤数组中大于 10 的元素，返回新数组&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="异步协作"><strong>异步协作</strong>
+</h4><p>AI 可以在你睡觉时工作：</p>
+<p>bash</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 你设定目标，AI 自主执行
+</span></span><span class="line"><span class="cl">&#34;实现用户评论功能，包括：
+</span></span><span class="line"><span class="cl">1. 数据库 schema（Comment 模型）
+</span></span><span class="line"><span class="cl">2. CRUD API
+</span></span><span class="line"><span class="cl">3. 前端评论表单
+</span></span><span class="line"><span class="cl">4. 评论列表展示
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">完成后告诉我，我先去忙别的。&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="信任但验证"><strong>信任但验证</strong>
+</h4><p>不要逐行检查 AI 的代码，而是：</p>
+<p><img src="/AppData/Roaming/Typora/typora-user-images/image-20260326210654189.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image-20260326210654189"
+	
+	
+></p>
+<p><strong>验证方式</strong>：</p>
+<ul>
+<li>功能测试：跑一下看看能不能用</li>
+<li>类型检查：<code>tsc</code> 有没有报错</li>
+<li>代码审查：只看关键逻辑，不看实现细节</li>
+</ul>
+<h3 id="从开发者到编排者">从开发者到编排者
+</h3><img src="https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260326210811511.png" alt="image-20260326210811511" style="zoom: 50%;" />
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">传统开发者</th>
+          <th style="text-align: center">Agent Native 编排者</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">手写代码</td>
+          <td style="text-align: center">描述需求</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">逐个修复</td>
+          <td style="text-align: center">反馈问题</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">关注语法</td>
+          <td style="text-align: center">关注产品</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">是工匠</td>
+          <td style="text-align: center">是指挥官</td>
+      </tr>
+  </tbody>
+</table></div>
+<p><strong>记住</strong>：代码是实现细节，产品才是目的。Agent Native 让你从&quot;怎么做&quot;中解放出来，专注于&quot;做什么&quot;。</p>
+<h2 id="提示词的核心原则prompt">提示词的核心原则（prompt）
+</h2><p>AI 是一个强大的编程助手，它理解技术术语、熟悉各种框架、能快速分析代码。</p>
+<p><strong>沟通的关键是：直接、具体、有上下文。</strong></p>
+<p>❌ <strong>绕弯子</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#34;你是一位资深的全栈工程师，精通各种技术栈...&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>→ AI 不需要角色扮演，它知道自己能做什么</p>
+<p>✅ <strong>直接说事</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#34;检测这个 React 组件的类型安全问题&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>→ 一句话讲清楚要做什么</p>
+<p>❌ <strong>模糊描述</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#34;帮我优化一下代码&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>→ AI 不知道优化什么方向</p>
+<p>✅ <strong>具体需求</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#34;优化登录页面的加载性能：
+</span></span><span class="line"><span class="cl">1. 添加图片懒加载
+</span></span><span class="line"><span class="cl">2. 延迟加载非关键资源
+</span></span><span class="line"><span class="cl">3. 使用 Next.js 的动态导入&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>→ 明确优化目标和实现方式</p>
+<h3 id="提示词原则">提示词原则
+</h3><p><img src="https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260326211328776.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image-20260326211328776"
+	
+	
+></p>
+<h3 id="提示词对比欠佳-vs-推荐">提示词对比：欠佳 vs 推荐
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">类型</th>
+          <th style="text-align: left">欠佳</th>
+          <th style="text-align: left">推荐</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>角色扮演</strong></td>
+          <td style="text-align: left">&ldquo;你是一位拥有 20 年经验的全栈工程师，精通 React、Vue、Angular、Node.js、Python&hellip;&rdquo;</td>
+          <td style="text-align: left">直接说任务：&ldquo;实现用户登录功能&rdquo;</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>模糊指令</strong></td>
+          <td style="text-align: left">&ldquo;帮我优化一下代码&rdquo;</td>
+          <td style="text-align: left">&ldquo;优化登录页面的加载性能：添加图片懒加载、延迟加载非关键资源&rdquo;</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>无边界限制</strong></td>
+          <td style="text-align: left">&ldquo;写一个完整的电商系统&rdquo;</td>
+          <td style="text-align: left">&ldquo;实现用户评论功能，包括：评论表单、列表展示、数据持久化&rdquo;</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>强行要求</strong></td>
+          <td style="text-align: left">&ldquo;你必须给出正确答案，不能说不知道&rdquo;</td>
+          <td style="text-align: left">&ldquo;如果不确定，请明确说&rsquo;我不确定&rsquo;，而不是编造答案&rdquo;</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>具体任务</strong></td>
+          <td style="text-align: left">&ldquo;帮我写一个登录功能&rdquo;</td>
+          <td style="text-align: left">&ldquo;实现用户登录功能：用户名+密码登录，使用 Next.js 16 App Router，Drizzle ORM + PostgreSQL，包含表单验证和错误处理&rdquo;</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>提供上下文</strong></td>
+          <td style="text-align: left">&ldquo;修复这个 Bug&rdquo;</td>
+          <td style="text-align: left">&ldquo;修复 Bug：文件 app/login/page.tsx，问题：用户登录后没有跳转到首页，预期：跳转到 /dashboard&rdquo;</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>指令要具体</strong></td>
+          <td style="text-align: left">&ldquo;添加测试&rdquo;</td>
+          <td style="text-align: left">&ldquo;为 app/login/page.tsx 编写测试用例，框架：Playwright，覆盖场景：密码错误、账号不存在、网络错误&rdquo;</td>
+      </tr>
+  </tbody>
+</table></div>
+<p><strong>核心原则</strong>：</p>
+<ul>
+<li>不要让 AI 猜 → 提供明确上下文</li>
+<li>不要含糊其辞 → 给出具体要求</li>
+<li>不要强行编造 → 给 AI 一个&quot;不确定&quot;的出口</li>
+</ul>
+<h3 id="让-ai-反复提问">让 AI 反复提问
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#34;我要开发一个任务管理应用。
+</span></span><span class="line"><span class="cl">请反复问我问题，直到你完全理解我的需求。
+</span></span><span class="line"><span class="cl">不要猜测，直接问。&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="五步工作流workflow">五步工作流（workflow）
+</h2><h3 id="探索项目结构详细说明背景">探索项目结构（详细说明背景）
+</h3><p>先了解项目现状，能在 prompt 中给出更精准的上下文——比如&quot;项目已有 Comment 表，请复用&quot;、&ldquo;代码风格参考 src/modules/posts&rdquo;。上下文越明确，AI 的输出越贴合你的项目。</p>
+<p><strong>先探索，再动手</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#34;探索这个项目的结构，告诉我:
+</span></span><span class="line"><span class="cl">1. 使用的技术栈
+</span></span><span class="line"><span class="cl">2. 文件组织方式
+</span></span><span class="line"><span class="cl">3. 现有的功能模块
+</span></span><span class="line"><span class="cl">4. 配置文件的作用&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>你会得到</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">项目使用 Next.js 16 + TypeScript + Drizzle
+</span></span><span class="line"><span class="cl">- app/: 页面和 API
+</span></span><span class="line"><span class="cl">- components/: 可复用组件
+</span></span><span class="line"><span class="cl">- src/db/: 数据库模型（已有 User 表，可关联）
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>关键信息</strong>：已有 User 表 → 直接关联，省去建表 + 10 分钟。</p>
+<h3 id="规划实现步骤详细说明需求">规划实现步骤（详细说明需求）
+</h3><p><strong>目的</strong>: 先想清楚再动手，减少返工</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#34;我要添加用户评论功能。
+</span></span><span class="line"><span class="cl">请规划实现步骤，包括:
+</span></span><span class="line"><span class="cl">1. 需要创建哪些文件
+</span></span><span class="line"><span class="cl">2. 需要修改哪些现有文件
+</span></span><span class="line"><span class="cl">3. 数据库 schema 变更
+</span></span><span class="line"><span class="cl">4. 实现顺序&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>输出示例</strong>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">步骤:
+</span></span><span class="line"><span class="cl">1. 更新 Drizzle schema (添加 Comment 模型)
+</span></span><span class="line"><span class="cl">2. 运行 npx drizzle-kit push
+</span></span><span class="line"><span class="cl">3. 创建 API route (app/api/comments/route.ts)
+</span></span><span class="line"><span class="cl">4. 创建评论组件 (components/CommentForm.tsx)
+</span></span><span class="line"><span class="cl">5. 集成到详情页
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="编写代码让ai自动执行">编写代码（让AI自动执行）
+</h3><p><strong>目的</strong>：按计划实现功能</p>
+<p><strong>AI 的自动拆分能力</strong>：</p>
+<p>复杂任务会被自动拆解：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 你只需要说
+</span></span><span class="line"><span class="cl">&#34;实现用户评论功能&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># AI 会自动拆分为：
+</span></span><span class="line"><span class="cl">1. 更新 Drizzle schema
+</span></span><span class="line"><span class="cl">2. 运行数据库迁移
+</span></span><span class="line"><span class="cl">3. 创建 API 端点
+</span></span><span class="line"><span class="cl">4. 编写前端组件
+</span></span><span class="line"><span class="cl">5. 集成到页面
+</span></span><span class="line"><span class="cl">6. 测试验证
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>你不需要手动指定每个步骤，AI 会：</p>
+<ul>
+<li>识别任务依赖关系</li>
+<li>确定执行顺序</li>
+<li>并行处理独立部分</li>
+<li>验证每个步骤的结果</li>
+</ul>
+<p><strong>当然，你也可以分步执行</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#34;按照步骤 1，更新 Drizzle schema&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#34;按照步骤 2，生成并运行迁移&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#34;按照步骤 3，创建评论 API&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="测试验证">测试验证
+</h3><p><strong>目的</strong>：确保功能正常</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#34;测试评论功能:
+</span></span><span class="line"><span class="cl">1. 验证 API 能正常创建评论
+</span></span><span class="line"><span class="cl">2. 验证评论能正确显示
+</span></span><span class="line"><span class="cl">3. 验证错误处理&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="提交代码包括git管理">提交代码（包括git管理）
+</h3><p><strong>场景：AI 改崩了代码，想回退</strong></p>
+<p>AI 为了修一个 Bug，改了 10 个文件，结果功能全乱了。你想回退，但发现没有存档点。</p>
+<p><strong>解决方案</strong>：让 AI <strong>自动提交代码</strong>。</p>
+<p><strong>配置方法</strong>：在 CLAUDE.md 中添加：</p>
+<blockquote>
+<p>&ldquo;每当你完成一个独立功能的开发，或修复完一个 Bug 并验证通过后，请自动运行 git commit 提交代码，并生成一句简洁的中文 commit message。&rdquo;</p>
+</blockquote>
+<p><strong>效果</strong>：</p>
+<ul>
+<li>AI 写完登录功能 → 自动 <code>git commit -m &quot;feat: 实现登录&quot;</code></li>
+<li>AI 写完首页 → 自动 <code>git commit -m &quot;feat: 添加首页&quot;</code></li>
+<li>AI 搞崩了代码 → <code>git log</code> 找到上一个版本，<code>git reset</code> 回退</li>
+</ul>
+<p><strong>自动提交 vs 检查点</strong>：</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">方式</th>
+          <th style="text-align: left">能回滚什么</th>
+          <th style="text-align: left">不能回滚什么</th>
+          <th style="text-align: left">适用场景</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">检查点</td>
+          <td style="text-align: left">AI 写入的文件</td>
+          <td style="text-align: left">终端命令产生的变更</td>
+          <td style="text-align: left">快速回退</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Git 提交</td>
+          <td style="text-align: left">所有已跟踪文件</td>
+          <td style="text-align: left">未跟踪文件</td>
+          <td style="text-align: left">重要里程碑</td>
+      </tr>
+  </tbody>
+</table></div>
+<p><strong>建议</strong>：两者都用。检查点用于快速试错，Git 提交用于重要节点。</p>
+<h4 id="检查点功能">检查点功能
+</h4><p><strong>场景：代码改崩了，想回滚</strong></p>
+<p>你让 AI 重构代码，结果功能全乱了。按 <code>Esc+Esc</code>，选择之前的检查点，代码恢复。松了口气。</p>
+<p><strong>但注意检查点的局限</strong>：</p>
+<p>你用 <code>/rewind</code> 回滚到早期版本，然后 <code>ls</code> 一看——</p>
+<ul>
+<li><code>index.html</code> 恢复了 ✓</li>
+<li><code>node_modules/</code> 还在（AI 删不了）</li>
+<li>数据库表也还在（AI 动不了）</li>
+</ul>
+<p><strong>原因</strong>：检查点只回滚 AI <strong>写入的文件</strong>，终端命令（<code>npm install</code>、<code>mkdir</code>）产生的变更无法回滚。</p>
+<p><strong>正确姿势</strong>：</p>
+<ul>
+<li>小改动 → 检查点快速回滚</li>
+<li>大改动 → <code>git commit</code> 后再让 AI 动手</li>
+</ul>
+<p><strong>使用方法</strong>： 按 <code>Esc+Esc</code> 或 <code>/rewind</code>，选择：</p>
+<ul>
+<li>仅对话：回退消息，保留代码</li>
+<li>仅代码：恢复文件，保留对话</li>
+<li>两者都恢复</li>
+</ul>
+<h2 id="一些简单小技巧和模板">一些简单小技巧和模板
+</h2><h3 id="提问模板">提问模板
+</h3><h4 id="最简单提问模板">最简单提问模板
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">我刚刚在做：[你刚刚做了什么]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">现在出现的问题是：[你现在看到的现象]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">我原本希望得到的结果是：[你想达到什么效果]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">请先帮我判断最可能的原因，再告诉我下一步该怎么做。
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>代码生成模板</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#34;实现 [功能名称]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">技术栈：
+</span></span><span class="line"><span class="cl">- Next.js [版本]
+</span></span><span class="line"><span class="cl">- TypeScript
+</span></span><span class="line"><span class="cl">- Drizzle ORM
+</span></span><span class="line"><span class="cl">- [其他技术]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">需求：
+</span></span><span class="line"><span class="cl">1. [具体需求1]
+</span></span><span class="line"><span class="cl">2. [具体需求2]
+</span></span><span class="line"><span class="cl">3. [具体需求3]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">注意事项：
+</span></span><span class="line"><span class="cl">- 遵循项目现有代码风格
+</span></span><span class="line"><span class="cl">- 不要引入新依赖，除非必要
+</span></span><span class="line"><span class="cl">- 包含错误处理&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="bug-修复模板">Bug 修复模板
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#34;修复 Bug
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">文件路径: [完整路径]
+</span></span><span class="line"><span class="cl">错误信息:
+</span></span><span class="line"><span class="cl">[完整报错日志]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">当前代码:
+</span></span><span class="line"><span class="cl">[相关代码片段]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">期望行为: [描述]
+</span></span><span class="line"><span class="cl">实际行为: [描述]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">请分析原因并提供修复方案&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="如果第一次没解决怎么办">如果第一次没解决怎么办
+</h3><p>第一次没解决，不代表你就失败了。很多问题本来就不是“一问就结束”，而是一个小迭代。</p>
+<p><img src="https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260326205658650.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image-20260326205658650"
+	
+	
+></p>
+<p>更好的做法是，把新的现象告诉 AI，说明你刚刚按它的建议做了什么，然后继续推进下一轮判断。</p>
+<h3 id="什么信息最值得补充">什么信息最值得补充
+</h3><p>如果第一次回答还不够，你下一步最值得补的，通常就是截图、完整报错原文、你刚刚改了哪个部分，以及你现在看到的结果和预期差在哪里。</p>
+<p>不要只说“它不对”“它坏了”“还是不行”。这类信息太少，AI 也很难帮你判断。</p>
+<h4 id="提示词自检清单">提示词自检清单
+</h4><p>发送提示词前检查：</p>
+<ul>
+<li>任务描述清晰具体</li>
+<li>提供了必要的上下文</li>
+<li>明确了输出格式</li>
+<li>给了 AI&quot;不确定&quot;的出口</li>
+<li>包含了必要的约束条件</li>
+<li>避免了冗长的角色设定</li>
+<li>没有包含敏感信息（API Key、密码等）</li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/vibecoding/">VibeCoding</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2026 Example Person
+    </section>
+
+</footer>
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

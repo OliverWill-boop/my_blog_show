@@ -90,7 +90,7 @@ bash
 
 不要逐行检查 AI 的代码，而是：
 
-![image-20260326210654189](./../../../../../../../AppData/Roaming/Typora/typora-user-images/image-20260326210654189.png)
+![image-20260326210654189](https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260326210654189.png)
 
 **验证方式**：
 

@@ -7,12 +7,20 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Thu, 26 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 31 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>VibeCoding</title>
         <link>https://example.com/categories/vibecoding/</link>
-        <pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate>
+        <pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate>
         
         <guid>https://example.com/categories/vibecoding/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>蓝桥杯</title>
+        <link>https://example.com/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/</link>
+        <pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/</guid>
         <description></description>
         </item>
         <item>
@@ -29,14 +37,6 @@
         <pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate>
         
         <guid>https://example.com/categories/%E5%B0%8F%E6%B8%B8%E6%88%8F/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>蓝桥杯</title>
-        <link>https://example.com/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/</link>
-        <pubDate>Wed, 25 Mar 2026 00:00:00 +0000</pubDate>
-        
-        <guid>https://example.com/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/</guid>
         <description></description>
         </item>
         <item>

@@ -7,7 +7,249 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Thu, 26 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/categories/vibecoding/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 31 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/categories/vibecoding/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>开发流程-V1</title>
+        <link>https://example.com/p/%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B-v1/</link>
+        <pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B-v1/</guid>
+        <description>&lt;h1 id=&#34;开发流程-v1&#34;&gt;开发流程-V1
+&lt;/h1&gt;&lt;h2 id=&#34;先整出来mvp&#34;&gt;先整出来MVP
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;用网页端那种可以快速一句话生成一个产品的编程工具快速出原型&lt;/li&gt;
+&lt;li&gt;这个原型需要满足你最想要的那个核心功能，就是MVP原则嘛&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;下载到本地并做修改&#34;&gt;下载到本地并做修改
+&lt;/h2&gt;&lt;h3 id=&#34;下载到本地之后应该做的一些事情&#34;&gt;&lt;strong&gt;下载到本地之后应该做的一些事情&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;建议按这个顺序打开项目&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;你可以直接让 AI 陪你把这一步走完。一个很够用的顺序是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;用 AI IDE 打开刚才那个项目文件夹&lt;/li&gt;
+&lt;li&gt;请 AI 先判断这是个什么类型的项目，应该怎么启动&lt;/li&gt;
+&lt;li&gt;按 AI 给出的步骤安装依赖、运行项目&lt;/li&gt;
+&lt;li&gt;在浏览器里打开本地地址，确认页面真的跑起来了&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果你不知道怎么开口，可以直接说：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;我刚把一个个人主页项目导出到本地。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;请先帮我判断这是个什么项目，告诉我应该怎么在本地跑起来。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;如果需要我执行命令，请一步一步告诉我。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;如果报错了，请根据报错继续带我排查。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这类提问很朴素，但非常有效。它没有假装你懂很多，也没有要求 AI 一次讲完所有原理，只是让它陪你把当前最重要的事做完。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;出现报错&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;这是我刚刚运行时的完整报错。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;请先判断最可能的原因是什么，再告诉我下一步只做什么，不要一次给太多方案。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;直接让 AI 用人话讲结构&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果你愿意，完全可以直接对 AI 说一句很实在的话：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;请你先用人话介绍这个项目的结构，告诉我：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1. 主页入口大概在哪
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2. 数字分身聊天区相关代码大概在哪
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3. 样式主要在哪些文件里
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;4. 现阶段我最不需要先读懂的部分是什么
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;不要展开太深，只给我一张够用地图。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这样的提问非常有价值，因为它能帮你在最短时间里形成一张地图。有了地图，你后面每一次修改，都会轻松很多。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;经典的三类提问&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;到了这里，也很适合顺手建立三类以后会高频重复使用的提问方式。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;理解类：这个项目结构在做什么？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这类问题帮你快速认识地图，避免你每次都像第一次进来一样陌生。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;请用人话解释这个项目目前的结构。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;告诉我主页入口、聊天相关代码、样式相关文件分别大概在哪。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;不要展开太深。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;定位类：我想改 X，代码在哪？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这类问题帮你在真正动手前，先找到入口。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;我想修改首页首屏的一句话介绍和主按钮文案。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;请先告诉我这两处分别在哪个文件里，再给出修改建议。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;约束类：只改这一处，不要动其他地方&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这类问题帮你把范围收住，尤其适合你还不想让 AI 一次动太多的时候。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;请只修改聊天框的引导语，不要改布局，不要新增模块，也不要调整配色。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;你会发现，这三类话术几乎贯穿后面所有章节。它们不花哨，但特别实用，因为它们直接对应你作为独立 vibe coder 最常见的三个动作：理解、定位、约束。&lt;/p&gt;
+&lt;p&gt;“&lt;strong&gt;现在问题是什么，我想要什么，哪些不动&lt;/strong&gt;”&lt;/p&gt;
+&lt;p&gt;先说现在的问题是什么，比如首屏信息太散、聊天入口不够明显、颜色有点像默认模板；再说你想改成什么感觉，比如更简洁、更多留白、更像一个认真做过的个人作品；最后再把边界说出来，比如先不要新增模块，只改首页首屏和整体配色，保留现在的内容结构。只要这三层同时在，AI 的改动就会稳定很多。&lt;/p&gt;
+&lt;p&gt;你可以把它记成一个很够用的句式：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;现在的问题是什么
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-&amp;gt; 我想改成什么感觉
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-&amp;gt; 这次只动哪些地方，不动哪些地方
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;先确定视觉风格&#34;&gt;&lt;strong&gt;先确定视觉风格&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;它反馈最快。你去改 API、改复杂逻辑、改数据结构，变化往往要经过一层理解，才能判断值不值；但界面不同。你调完首屏排版，页面是不是更顺眼，立刻就能看出来；你把聊天入口做明显了，别人会不会注意到，也几乎马上能判断。&lt;/p&gt;
+&lt;p&gt;对新手来说，这种快速反馈很重要。它会让你更容易建立信心：原来我不是只能说一个很模糊的“改好看一点”，我真的可以一点点把页面往自己想要的方向推过去。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;先定一句方向描述&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果你现在还说不清，可以先给自己的页面写一句方向描述。比如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;我想要一个简约专业、信息层次清楚、带一点轻微科技感的个人主页。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;或者：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;我希望首页看起来温暖友好、容易交流，不要太像简历，也不要太像模板站。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这一步看起来像“定感觉”，其实非常重要。因为一旦方向明确，后面你让 AI 修改排版、颜色、层次时，就不再是在空中挥手，而是在朝着一个已经说得出口的方向收敛。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;可以给AI一些参考方向&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;好看之外，还要顺手建立一点“好不好用”的意识&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这里也很适合建立一点最小体验意识。界面不只是“好不好看”，也包括“好不好用”。一个页面也许颜色不错、排版也不乱，但如果访客一眼看不懂你是谁，不知道该点哪里，不知道聊天区是干什么的，那它就还没有真正进入“作品”状态。&lt;/p&gt;
+&lt;p&gt;所以当你让 AI 修改界面时，也可以顺手把这种体验要求说进去：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首屏要一眼知道我是谁&lt;/li&gt;
+&lt;li&gt;聊天入口要更明显&lt;/li&gt;
+&lt;li&gt;手机端要保证信息可读&lt;/li&gt;
+&lt;li&gt;按钮要有基本反馈&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些要求不复杂，但特别实用。它们会把“改界面”从单纯好看，往“别人真的会用”推进一步。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;做好git存档&#34;&gt;&lt;strong&gt;做好git存档&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;基础版里的 Git，只负责一件事&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果你现在一听到 Git 就紧张，也可以把这件事想得更现实一点：它不是要你突然学会分支、PR、合并冲突，而只是给项目装一个最基础的时光机。甚至连这些操作，你都不一定要自己硬记命令。你完全可以让 AI 帮你做，重点是你知道自己现在为什么需要它，以及你希望它替你完成什么。&lt;/p&gt;
+&lt;p&gt;对基础版来说，Git 只负责三件事：&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;动作&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;你现在把它理解成什么&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;存一次&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;给当前稳定版本打一个可回来的点&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;看历史&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;看看自己之前存过哪些版本&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;退回来&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;某次改崩时，回到上一个可用版本&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;到这个程度，就已经很够用。你不需要现在就知道很多命令参数，也不需要理解完整协作工作流。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;你甚至可以把操作委托给 AI&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这一步完全可以继续沿用本书前面的思路：不是所有操作都要自己硬背，而是把目标说清楚，让 AI 陪你走。&lt;/p&gt;
+&lt;p&gt;比如你可以直接说：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;我现在准备开始给主页补内容。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;在动手前，请先帮我做一个最小存档，让我之后改坏了还能退回来。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;请一步一步带我完成，不要展开 Git 理论。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;或者：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;请帮我查看这个项目目前有没有存档记录。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;如果之后我改坏了，告诉我最小回退路径是什么。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;只讲这次需要知道的部分。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这种说法很适合基础版。你不是在上 Git 课，而是在用 Git 解决一个马上会遇到的实际问题。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>AI调试技巧</title>
         <link>https://example.com/p/ai%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/</link>
         <pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate>

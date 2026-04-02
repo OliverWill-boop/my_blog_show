@@ -8,12 +8,12 @@
         <language>en-us</language>
         <copyright>Example Person</copyright>
         <lastBuildDate>Wed, 01 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/post/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>2026.4.1错题笔记（14届国赛）</title>
-        <link>https://example.com/p/2026.4.1%E9%94%99%E9%A2%98%E7%AC%94%E8%AE%B014%E5%B1%8A%E5%9B%BD%E8%B5%9B/</link>
+        <title>2026.4.1错题笔记（15届省赛第一次）</title>
+        <link>https://example.com/p/2026.4.1%E9%94%99%E9%A2%98%E7%AC%94%E8%AE%B015%E5%B1%8A%E7%9C%81%E8%B5%9B%E7%AC%AC%E4%B8%80%E6%AC%A1/</link>
         <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/2026.4.1%E9%94%99%E9%A2%98%E7%AC%94%E8%AE%B014%E5%B1%8A%E5%9B%BD%E8%B5%9B/</guid>
-        <description>&lt;h1 id=&#34;202641错题笔记14届国赛&#34;&gt;2026.4.1错题笔记（14届国赛）
+        <guid>https://example.com/p/2026.4.1%E9%94%99%E9%A2%98%E7%AC%94%E8%AE%B015%E5%B1%8A%E7%9C%81%E8%B5%9B%E7%AC%AC%E4%B8%80%E6%AC%A1/</guid>
+        <description>&lt;h1 id=&#34;202641错题笔记15届省赛第一次&#34;&gt;2026.4.1错题笔记（15届省赛第一次）
 &lt;/h1&gt;&lt;h2 id=&#34;ne555考点&#34;&gt;ne555考点
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;除底层之外有下面几个需要注意的地方&lt;/li&gt;
@@ -868,12 +868,12 @@
 </description>
         </item>
         <item>
-        <title>开发流程-V1</title>
-        <link>https://example.com/p/%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B-v1/</link>
+        <title>基本开发流程</title>
+        <link>https://example.com/p/%E5%9F%BA%E6%9C%AC%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/</link>
         <pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B-v1/</guid>
-        <description>&lt;h1 id=&#34;开发流程-v1&#34;&gt;开发流程-V1
+        <guid>https://example.com/p/%E5%9F%BA%E6%9C%AC%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/</guid>
+        <description>&lt;h1 id=&#34;基本开发流程&#34;&gt;基本开发流程
 &lt;/h1&gt;&lt;h2 id=&#34;先整出来mvp&#34;&gt;先整出来MVP
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;用网页端那种可以快速一句话生成一个产品的编程工具快速出原型&lt;/li&gt;
@@ -3438,6 +3438,14 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 </description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://example.com/p/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/</guid>
+        <description></description>
         </item>
         <item>
         <title></title>

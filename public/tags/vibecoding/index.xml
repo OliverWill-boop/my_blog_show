@@ -8,12 +8,12 @@
         <language>en-us</language>
         <copyright>Example Person</copyright>
         <lastBuildDate>Tue, 31 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/vibecoding/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>开发流程-V1</title>
-        <link>https://example.com/p/%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B-v1/</link>
+        <title>基本开发流程</title>
+        <link>https://example.com/p/%E5%9F%BA%E6%9C%AC%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/</link>
         <pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B-v1/</guid>
-        <description>&lt;h1 id=&#34;开发流程-v1&#34;&gt;开发流程-V1
+        <guid>https://example.com/p/%E5%9F%BA%E6%9C%AC%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/</guid>
+        <description>&lt;h1 id=&#34;基本开发流程&#34;&gt;基本开发流程
 &lt;/h1&gt;&lt;h2 id=&#34;先整出来mvp&#34;&gt;先整出来MVP
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;用网页端那种可以快速一句话生成一个产品的编程工具快速出原型&lt;/li&gt;

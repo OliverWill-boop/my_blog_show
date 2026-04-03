@@ -8,19 +8,19 @@
         <language>en-us</language>
         <copyright>Example Person</copyright>
         <lastBuildDate>Fri, 03 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>VibeCoding</title>
+        <link>https://example.com/categories/vibecoding/</link>
+        <pubDate>Fri, 03 Apr 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/categories/vibecoding/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>蓝桥杯</title>
         <link>https://example.com/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/</link>
         <pubDate>Fri, 03 Apr 2026 00:00:00 +0000</pubDate>
         
         <guid>https://example.com/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>VibeCoding</title>
-        <link>https://example.com/categories/vibecoding/</link>
-        <pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate>
-        
-        <guid>https://example.com/categories/vibecoding/</guid>
         <description></description>
         </item>
         <item>

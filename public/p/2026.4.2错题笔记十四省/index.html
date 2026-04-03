@@ -300,6 +300,7 @@
         <li><a href="#ds18b20-初始化等待的原因">DS18B20 初始化等待的原因</a></li>
       </ol>
     </li>
+    <li><a href="#界面切换按键">界面切换按键</a></li>
   </ol>
 </nav>
         </div>
@@ -523,6 +524,47 @@
 </span></span><span class="line"><span class="cl">		Scheduler_Run(); // 循环执行任务调度器
 </span></span><span class="line"><span class="cl">	}
 </span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="界面切换按键">界面切换按键
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">case 4:
+</span></span><span class="line"><span class="cl">                Seg_Mode = (Seg_Mode + 1) % 3;
+</span></span><span class="line"><span class="cl">                // ★ 修改点③：进入回看界面时重置子模式
+</span></span><span class="line"><span class="cl">                if(Seg_Mode == 1)
+</span></span><span class="line"><span class="cl">                    Show_Mode = 0;
+</span></span><span class="line"><span class="cl">            break;
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            if(Seg_Mode == 2)
+</span></span><span class="line"><span class="cl">								{
+</span></span><span class="line"><span class="cl">									Temperature_Param = (Temperature_Param == 0) ? 0 : Temperature_Param - 1;
+</span></span><span class="line"><span class="cl">								}
+</span></span><span class="line"><span class="cl">								
+</span></span><span class="line"><span class="cl">		我觉得下面这个逻辑更好，先判断再操作
 </span></span></code></pre></td></tr></table>
 </div>
 </div>

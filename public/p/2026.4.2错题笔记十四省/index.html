@@ -2,16 +2,16 @@
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="学习笔记">
-<title>2026.4.1错题笔记（15届省赛第一次）</title>
+<title>2026.4.2错题笔记（十四省）</title>
 
-<link rel='canonical' href='https://example.com/p/2026.4.1%E9%94%99%E9%A2%98%E7%AC%94%E8%AE%B015%E5%B1%8A%E7%9C%81%E8%B5%9B%E7%AC%AC%E4%B8%80%E6%AC%A1/'>
+<link rel='canonical' href='https://example.com/p/2026.4.2%E9%94%99%E9%A2%98%E7%AC%94%E8%AE%B0%E5%8D%81%E5%9B%9B%E7%9C%81/'>
 
-<link rel="stylesheet" href="/scss/style.min.6a692fd055deae459f2a9767f57f3855ba80cafd5041317f24f7360f6ca47cdf.css"><meta property='og:title' content="2026.4.1错题笔记（15届省赛第一次）">
+<link rel="stylesheet" href="/scss/style.min.6a692fd055deae459f2a9767f57f3855ba80cafd5041317f24f7360f6ca47cdf.css"><meta property='og:title' content="2026.4.2错题笔记（十四省）">
 <meta property='og:description' content="学习笔记">
-<meta property='og:url' content='https://example.com/p/2026.4.1%E9%94%99%E9%A2%98%E7%AC%94%E8%AE%B015%E5%B1%8A%E7%9C%81%E8%B5%9B%E7%AC%AC%E4%B8%80%E6%AC%A1/'>
+<meta property='og:url' content='https://example.com/p/2026.4.2%E9%94%99%E9%A2%98%E7%AC%94%E8%AE%B0%E5%8D%81%E5%9B%9B%E7%9C%81/'>
 <meta property='og:site_name' content='告白火山的个人博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='蓝桥杯' /><meta property='article:published_time' content='2026-04-01T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-04-01T00:00:00&#43;00:00'/>
-<meta name="twitter:title" content="2026.4.1错题笔记（15届省赛第一次）">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='蓝桥杯' /><meta property='article:published_time' content='2026-04-02T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-04-02T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="2026.4.2错题笔记（十四省）">
 <meta name="twitter:description" content="学习笔记">
     </head>
     <body class="
@@ -284,22 +284,22 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#ne555考点">ne555考点</a></li>
-    <li><a href="#数组赋值问题">数组赋值问题</a></li>
-    <li><a href="#关于初始化函数要不要写的问题">关于初始化函数要不要写的问题</a></li>
-    <li><a href="#频率测量的代码怎么写">频率测量的代码怎么写</a>
+    <li><a href="#通过-pcf8591-的-adc-通道测量光敏电阻和固定电阻上的分压结果实现亮暗两种状态的检测">通过 PCF8591 的 ADC 通道测量光敏电阻和固定电阻上的分压结果，实现“亮”、“暗”两种状态的检测</a>
       <ol>
-        <li><a href="#变量类型分析">变量类型分析</a></li>
-        <li><a href="#关键机制有符号与无符号的运算转换">关键机制：有符号与无符号的运算转换</a></li>
-        <li><a href="#为什么-freq_final45000-能检测负数">为什么 Freq_final&gt;45000 能检测负数</a></li>
-        <li><a href="#举例说明">举例说明</a></li>
-        <li><a href="#结论">结论</a></li>
+        <li><a href="#实现亮暗状态检测的代码分析">实现亮暗状态检测的代码分析</a>
+          <ol>
+            <li><a href="#核心代码">核心代码：</a></li>
+            <li><a href="#工作原理">工作原理：</a></li>
+            <li><a href="#技术要点">技术要点：</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
-    <li><a href="#默认处理按键有效情景">默认处理按键有效情景</a></li>
-    <li><a href="#adda">ADDA</a></li>
-    <li><a href="#保留频率最大值">保留频率最大值</a></li>
-    <li><a href="#母界面跳转的时候把子界面初始化">母界面跳转的时候把子界面初始化</a></li>
+    <li><a href="#温度传感器初始化问题">温度传感器初始化问题</a>
+      <ol>
+        <li><a href="#ds18b20-初始化等待的原因">DS18B20 初始化等待的原因</a></li>
+      </ol>
+    </li>
   </ol>
 </nav>
         </div>
@@ -327,7 +327,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/2026.4.1%E9%94%99%E9%A2%98%E7%AC%94%E8%AE%B015%E5%B1%8A%E7%9C%81%E8%B5%9B%E7%AC%AC%E4%B8%80%E6%AC%A1/">2026.4.1错题笔记（15届省赛第一次）</a>
+            <a href="/p/2026.4.2%E9%94%99%E9%A2%98%E7%AC%94%E8%AE%B0%E5%8D%81%E5%9B%9B%E7%9C%81/">2026.4.2错题笔记（十四省）</a>
         </h2>
     
         
@@ -353,7 +353,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Apr 01, 2026</time>
+                <time class="article-time--published">Apr 02, 2026</time>
             </div>
         
 
@@ -368,7 +368,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 3 分钟
+                    阅读时长: 2 分钟
                 </time>
             </div>
         
@@ -383,83 +383,12 @@
     <section class="article-content">
     
     
-    <h1 id="202641错题笔记15届省赛第一次">2026.4.1错题笔记（15届省赛第一次）
-</h1><h2 id="ne555考点">ne555考点
-</h2><ul>
-<li>除底层之外有下面几个需要注意的地方</li>
-<li>1.要注意频率测量的时候用的是定时器0，要注意定时器0和定时器1的初始化先后顺序问题，应该先0再1</li>
-<li>2.对频率进行数码管显示的时候，要注意1s后再开始显示（定义一个标志位就行），否则会导致第一次频率测量出现问题</li>
-<li>3.一定要使用跳线帽接上P34和SIGNAL这个线，否则会测量不到东西</li>
-<li>4.由于按键最后一列会用到P34，所以我们这里必须把他给屏蔽了，不然会导致P34的上升下降测量误差，会
-影响评分</li>
-</ul>
-<h2 id="数组赋值问题">数组赋值问题
-</h2><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">void sys_default()
-</span></span><span class="line"><span class="cl">{
-</span></span><span class="line"><span class="cl">	seg_mode = 1; 
-</span></span><span class="line"><span class="cl">	Freq_limit = 2000;
-</span></span><span class="line"><span class="cl">	Freq_jiaozhun = 0;
-</span></span><span class="line"><span class="cl">	
-</span></span><span class="line"><span class="cl">	//测试代码
-</span></span><span class="line"><span class="cl">	Freq_final = 6666;
-</span></span><span class="line"><span class="cl">	Freq_limit = 888;
-</span></span><span class="line"><span class="cl">	Freq_jiaozhun = 383;
-</span></span><span class="line"><span class="cl">	Freq_max = 838;
-</span></span><span class="line"><span class="cl">	ucrtc_echo[3]={38,38,38};
-</span></span><span class="line"><span class="cl">}
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>最后一行，我想对数组赋值，但是这样写是不对的！只有定义初始化的时候可以这样进行赋值，其他时候只能单独对数组的元素进行操作。</li>
-</ul>
-<h2 id="关于初始化函数要不要写的问题">关于初始化函数要不要写的问题
-</h2><ul>
-<li>不是任何时候都写sys_default()的！只有在这个恢复默认状态事件有触发条件的时候才会专门写一个，平时不用写，否则调用起来很麻烦</li>
-</ul>
-<h2 id="频率测量的代码怎么写">频率测量的代码怎么写
-</h2><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">	
-</span></span><span class="line"><span class="cl">	在定时器1中断中：
-</span></span><span class="line"><span class="cl">	if(++time1s==1000)
-</span></span><span class="line"><span class="cl">	{
-</span></span><span class="line"><span class="cl">		time1s=0;
-</span></span><span class="line"><span class="cl">		Freq = TH0&lt;&lt;8 |TL0;
-</span></span><span class="line"><span class="cl">		TH0 = TL0 = 0;
-</span></span><span class="line"><span class="cl">	}
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>频率就是1s测量到的脉冲上升沿的数量，所以上面在中断中写的代码，就已经取出了频率值</li>
-</ul>
-<div class="highlight"><div class="chroma">
+    <h1 id="202642错题笔记十四省">2026.4.2错题笔记（十四省）
+</h1><h2 id="通过-pcf8591-的-adc-通道测量光敏电阻和固定电阻上的分压结果实现亮暗两种状态的检测">通过 PCF8591 的 ADC 通道测量光敏电阻和固定电阻上的分压结果，实现“亮”、“暗”两种状态的检测
+</h2><h3 id="实现亮暗状态检测的代码分析">实现亮暗状态检测的代码分析
+</h3><p>在 <code>main.c</code> 文件中，实现通过 PCF8591 ADC 通道测量光敏电阻和固定电阻分压结果，从而检测&quot;亮&quot;、&ldquo;暗&quot;两种状态的代码如下：</p>
+<h4 id="核心代码">核心代码：
+</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -479,105 +408,85 @@
 </span><span class="lnt">16
 </span><span class="lnt">17
 </span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">void freq_task()
-</span></span><span class="line"><span class="cl">{
-</span></span><span class="line"><span class="cl">	Freq_final = Freq+Freq_jiaozhun;
-</span></span><span class="line"><span class="cl">	if(Freq_final&gt;45000)
-</span></span><span class="line"><span class="cl">		freq_error_flag = 1;
-</span></span><span class="line"><span class="cl">	else
-</span></span><span class="line"><span class="cl">		freq_error_flag = 0;
-</span></span><span class="line"><span class="cl">	
-</span></span><span class="line"><span class="cl">	if(Freq_final&gt;Freq_max)
-</span></span><span class="line"><span class="cl">		echo_flag = 1;
-</span></span><span class="line"><span class="cl">	else
-</span></span><span class="line"><span class="cl">		echo_flag = 0;
-</span></span><span class="line"><span class="cl">	
-</span></span><span class="line"><span class="cl">	if(echo_flag&amp;&amp;(freq_error_flag!=1))
-</span></span><span class="line"><span class="cl">	{
-</span></span><span class="line"><span class="cl">		Freq_max = Freq_final;
-</span></span><span class="line"><span class="cl">		strncpy(ucrtc_echo,ucrtc,3);
-</span></span><span class="line"><span class="cl">	}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">	
-</span></span><span class="line"><span class="cl">}
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cm">/* AD_DA */</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">AD_DA</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">temp_ad</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">temp_ad</span> <span class="o">=</span> <span class="nf">Ad_Read</span><span class="p">(</span><span class="mh">0x01</span><span class="p">);</span>  <span class="c1">// 读取PCF8591通道1的AD值（光敏电阻）
+</span></span></span><span class="line"><span class="cl">    <span class="c1">// 假设用80作为亮暗分割线
+</span></span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">Triggered_Acquisition</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">((</span><span class="n">temp_ad</span> <span class="o">&lt;</span> <span class="mi">80</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">Voltage_Light_Value_Old</span> <span class="o">&gt;</span> <span class="mi">80</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Triggered_Acquisition</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>       <span class="c1">// 触发采集
+</span></span></span><span class="line"><span class="cl">            <span class="n">Temperature_Acquisitioned</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>    <span class="c1">// 等待采集温度
+</span></span></span><span class="line"><span class="cl">            <span class="n">Humidity_Acquisitioned</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>       <span class="c1">// 等待采集湿度
+</span></span></span><span class="line"><span class="cl">            <span class="n">Entry_Data</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>                   <span class="c1">// 等待数据录入
+</span></span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Voltage_Light_Value_Old</span> <span class="o">=</span> <span class="n">temp_ad</span><span class="p">;</span>  <span class="c1">// 保存当前值为旧值
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><ul>
-<li>
-<p>注意#include &ldquo;string.h&rdquo;，要引用这个头文件，才能用strncpy(ucrtc_echo,ucrtc,3);</p>
-</li>
-<li>
-<p>这个函数的 作用是：将 ucrtc 数组（当前 RTC 时间）的前 3 个字节复制到 ucrtc_echo 数组中。这里的 3 对应 RTC 时间的 3 个组成部分（时、分、秒）。</p>
-</li>
-<li>
-<p>if(Freq_final&gt;45000) 能够检测到校准后频率为负数的原因与 C语言中的类型转换规则 有关，具体分析如下：</p>
-<h3 id="变量类型分析">变量类型分析
-</h3><ul>
-<li>Freq ： unsigned int （无符号整型，范围 0~65535）</li>
-<li>Freq_jiaozhun ： int （有符号整型，范围 -32768~32767）</li>
-<li>Freq_final ： unsigned int （无符号整型，范围 0~65535）</li>
-</ul>
-<h3 id="关键机制有符号与无符号的运算转换">关键机制：有符号与无符号的运算转换
-</h3><p>当 Freq_jiaozhun （有符号）与 Freq （无符号）相加时，C 语言会自动将 有符号数转换为无符号数 后再运算。</p>
-<p>负数的无符号表示 ：
-当 Freq_jiaozhun 为负数时，它会被转换为一个 很大的无符号值 （例如，-1 会变成 65535，-1000 会变成 64536）。</p>
-<h3 id="为什么-freq_final45000-能检测负数">为什么 Freq_final&gt;45000 能检测负数
-</h3><ul>
-<li>正常情况 ：如果 Freq_jiaozhun 为正数或较小的负数， Freq + Freq_jiaozhun 的结果会在合理范围内（如 0~45000）。</li>
-<li>异常情况 ：如果 Freq_jiaozhun 是 较大的负数 （例如 -10000），转换为无符号数后会变成 很大的值 （如 55536），与 Freq 相加后可能超过 45000。</li>
-</ul>
-<h3 id="举例说明">举例说明
-</h3><p>假设 Freq = 10000 ：</p>
+</div><h4 id="工作原理">工作原理：
+</h4><ol>
+<li><strong>AD值读取</strong>：通过 <code>Ad_Read(0x01)</code> 读取 PCF8591 芯片通道1的AD转换值，该通道连接光敏电阻</li>
+<li><strong>是通道1就行，0x01和0x41都可以</strong></li>
+<li><strong>状态判断</strong>：
 <ul>
-<li>若 Freq_jiaozhun = 500 （正数），则 Freq_final = 10500 （正常）。</li>
-<li>若 Freq_jiaozhun = -500 （小负数），则 Freq_final = 9500 （正常）。</li>
-<li>若 Freq_jiaozhun = -20000 （大负数），转换为无符号数后为 65536 - 20000 = 45536 ，则 Freq_final = 10000 + 45536 = 55536 （超过 45000，触发错误标志）。</li>
+<li>以 80 作为亮暗状态的分割阈值</li>
+<li>当当前AD值 <code>&lt; 80</code>（暗）且上一次AD值 <code>&gt; 80</code>（亮）时，检测到从亮到暗的状态变化</li>
 </ul>
-<h3 id="结论">结论
-</h3><p>if(Freq_final&gt;45000) 不仅能检测实际频率过高的情况，还能通过 无符号数溢出 机制检测到由于 Freq_jiaozhun 为较大负数导致的校准后频率为负的情况。这是一种巧妙利用 C 语言类型转换特性的错误检测方法。</p>
 </li>
-<li>
-<p>处理频率就在频率函数上运算，显示就在seg上显示，题目没说显示必须在某个条件下才显示，那就不要动数码管模块！！！！</p>
+<li><strong>触发机制</strong>：
+<ul>
+<li>仅在状态变化的瞬间触发采集操作</li>
+<li>避免持续触发，提高系统效率</li>
+</ul>
 </li>
+<li><strong>状态保存</strong>：将当前AD值保存到 <code>Voltage_Light_Value_Old</code> 变量，用于下次比较</li>
+</ol>
+<h4 id="技术要点">技术要点：
+</h4><ul>
+<li><strong>边缘检测</strong>：使用前后两次AD值的比较，实现状态变化的边缘检测</li>
+<li><strong>阈值设定</strong>：通过经验值 80 作为亮暗状态的判断标准</li>
+<li><strong>标志位管理</strong>：通过多个标志位控制后续的数据采集流程</li>
 </ul>
-<h2 id="默认处理按键有效情景">默认处理按键有效情景
-</h2><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">S8、S9 分别定义为 “加”和“减”按键，在参数界面的两个子界面
-</span></span><span class="line"><span class="cl">下有效。
-</span></span><span class="line"><span class="cl">① 超限参数界面下，按下 S8 按键，超限参数增加 1000Hz,按下 S9 按
-</span></span><span class="line"><span class="cl">键，超限参数减小 1000Hz。
-</span></span><span class="line"><span class="cl">② 校准值参数界面下，按下 S8 按键，校准值参数增加 100Hz, 按下
-</span></span><span class="line"><span class="cl">S9 按键，校准值参数减小 100Hz。
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>像这种，就需要默认按键8和9是在参数界面（母界面）才有效</li>
+<p>这种实现方式可以有效地检测环境光强度的变化，当环境从亮变暗时触发数据采集，适用于需要根据光线变化启动特定操作的场景。</p>
+<blockquote>
+<p>我发现我应该每次做题都使用那个固定的大模板，不要扣太多细节，多写无所谓，少写会扣分！！！！而那个大模板是最全面的</p>
+</blockquote>
+<h2 id="温度传感器初始化问题">温度传感器初始化问题
+</h2><h3 id="ds18b20-初始化等待的原因">DS18B20 初始化等待的原因
+</h3><p>while(rd_temperature() == 85); 这行代码的作用是等待 DS18B20 温度传感器初始化完成，主要原因如下：</p>
+<ol>
+<li>DS18B20 的特性</li>
+</ol>
+<ul>
+<li>默认初始值 ：DS18B20 刚上电时会返回 85°C 的默认值</li>
+<li>初始化过程 ：传感器需要时间进行内部校准和准备工作</li>
+<li>稳定时间 ：从上电到完全就绪需要一定时间 2. 技术原理</li>
+<li>硬件特性 ：DS18B20 在电源接通后，内部电路需要时间稳定</li>
+<li>温度转换 ：首次温度转换需要更长时间（最高精度下可达 750ms）</li>
+<li>数据可靠性 ：未初始化完成时返回的 85°C 是无效数据 3. 代码实现分析</li>
+<li>rd_temperature() 函数会执行完整的温度读取流程：
+<ol>
+<li>初始化总线</li>
+<li>发送温度转换命令</li>
+<li>等待转换完成</li>
+<li>读取温度数据</li>
+<li>计算实际温度</li>
+</ol>
+</li>
+<li>当传感器未完全就绪时，会持续返回 85°C</li>
+<li>循环会一直执行直到返回值不等于 85°C，确保获取到真实的温度值 4. 重要性</li>
+<li>系统稳定性 ：确保系统启动后使用的第一个温度数据是准确的</li>
+<li>避免错误数据 ：防止使用 85°C 这个默认值进行后续计算</li>
+<li>硬件兼容性 ：适应不同批次、不同状态的 DS18B20 传感器
+这种等待机制是 DS18B20 温度传感器使用中的标准做法，确保了温度数据的可靠性和系统的稳定性。</li>
 </ul>
-<h2 id="adda">ADDA
-</h2><p><img src="https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260401221534608.png"
-	
-	
-	
-	loading="lazy"
-	
-		alt="image-20260401221534608"
-	
-	
-></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -598,118 +507,25 @@
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">void adda_task()
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">void main()
 </span></span><span class="line"><span class="cl">{
-</span></span><span class="line"><span class="cl">	if(freq_error_flag)
-</span></span><span class="line"><span class="cl">		da_out = 0;	
-</span></span><span class="line"><span class="cl">	else
+</span></span><span class="line"><span class="cl">	System_Init();	// 系统底层初始化
+</span></span><span class="line"><span class="cl">	Set_Rtc(ucRtc); // 初始化DS1302时钟时间
+</span></span><span class="line"><span class="cl">	while(rd_temperature() == 85);  //等待DS18B20初始化完成!
+</span></span><span class="line"><span class="cl">	// 各模块初始化
+</span></span><span class="line"><span class="cl">	Timer0_Init();	  // 定时器0（频率计数）初始化
+</span></span><span class="line"><span class="cl">	Scheduler_Init(); // 任务调度器初始化
+</span></span><span class="line"><span class="cl">	Timer1_Init();	  // 定时器1（系统心跳）初始化
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	// 主循环
+</span></span><span class="line"><span class="cl">	while (1)
 </span></span><span class="line"><span class="cl">	{
-</span></span><span class="line"><span class="cl">		if(Freq_final&lt;500)
-</span></span><span class="line"><span class="cl">			da_out = 1.0f;
-</span></span><span class="line"><span class="cl">		else if(Freq_final&gt;Freq_limit)
-</span></span><span class="line"><span class="cl">			da_out = 5.0f;
-</span></span><span class="line"><span class="cl">		else 
-</span></span><span class="line"><span class="cl">		da_out = (4.0 / (Freq_limit - 500.0f)) *(Freq_final-500.0f)+1.0f; 
-</span></span><span class="line"><span class="cl">			
+</span></span><span class="line"><span class="cl">		Scheduler_Run(); // 循环执行任务调度器
 </span></span><span class="line"><span class="cl">	}
-</span></span><span class="line"><span class="cl">	da_write(da_out*51);
 </span></span><span class="line"><span class="cl">}
 </span></span></code></pre></td></tr></table>
 </div>
-</div><ul>
-<li>要注意负半轴也需要考虑，因为题目里也写了关于负数的情况</li>
-</ul>
-<h2 id="保留频率最大值">保留频率最大值
-</h2><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">错误代码：
-</span></span><span class="line"><span class="cl">if(Freq_final &gt; Freq_max)
-</span></span><span class="line"><span class="cl">	{
-</span></span><span class="line"><span class="cl">		echo_flag = 0;
-</span></span><span class="line"><span class="cl">	}
-</span></span><span class="line"><span class="cl">	else
-</span></span><span class="line"><span class="cl">	{
-</span></span><span class="line"><span class="cl">		echo_flag = 1;
-</span></span><span class="line"><span class="cl">	}
-</span></span><span class="line"><span class="cl">	
-</span></span><span class="line"><span class="cl">	if(!freq_error_flag&amp;&amp;echo_flag)
-</span></span><span class="line"><span class="cl">	{
-</span></span><span class="line"><span class="cl">		Freq_max = Freq_final;
-</span></span><span class="line"><span class="cl">		strncpy(ucrtc_echo, ucrtc, 3);
-</span></span><span class="line"><span class="cl">	}
-</span></span></code></pre></td></tr></table>
 </div>
-</div><ul>
-<li>我写反了，应该当Freq_final &gt; Freq_max时，拉高echo_flag，然后后面那个if就是在频率正常并且还未到最高值的时候，把当下的freq给max</li>
-</ul>
-<h2 id="母界面跳转的时候把子界面初始化">母界面跳转的时候把子界面初始化
-</h2><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">case 4:  //母界面切换按键
-</span></span><span class="line"><span class="cl">			if(seg_mode==0)
-</span></span><span class="line"><span class="cl">			{
-</span></span><span class="line"><span class="cl">				parameter_mode = 0;
-</span></span><span class="line"><span class="cl">				seg_mode = 1;
-</span></span><span class="line"><span class="cl">			}
-</span></span><span class="line"><span class="cl">			else if(seg_mode==1) 
-</span></span><span class="line"><span class="cl">			{
-</span></span><span class="line"><span class="cl">				seg_mode = 2;
-</span></span><span class="line"><span class="cl">			}
-</span></span><span class="line"><span class="cl">			else if(seg_mode==2)
-</span></span><span class="line"><span class="cl">			{
-</span></span><span class="line"><span class="cl">				echo_mode = 0;							
-</span></span><span class="line"><span class="cl">				seg_mode = 3;
-</span></span><span class="line"><span class="cl">			}
-</span></span><span class="line"><span class="cl">			else if(seg_mode==3)
-</span></span><span class="line"><span class="cl">			{
-</span></span><span class="line"><span class="cl">				seg_mode=0;
-</span></span><span class="line"><span class="cl">			}
-</span></span><span class="line"><span class="cl">		break;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>注意把echo_mode和parameter_mode初始化</li>
-</ul>
-
 </section>
 
 
@@ -764,12 +580,12 @@
             
                 
 <article class="">
-    <a href="/p/2026.4.2%E9%94%99%E9%A2%98%E7%AC%94%E8%AE%B0%E5%8D%81%E5%9B%9B%E7%9C%81/">
+    <a href="/p/2026.4.1%E9%94%99%E9%A2%98%E7%AC%94%E8%AE%B015%E5%B1%8A%E7%9C%81%E8%B5%9B%E7%AC%AC%E4%B8%80%E6%AC%A1/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">2026.4.2错题笔记（十四省）</h2>
+            <h2 class="article-title">2026.4.1错题笔记（15届省赛第一次）</h2>
         </div>
     </a>
 </article>

@@ -923,7 +923,40 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;闪烁就不用说了简单&#34;&gt;闪烁就不用说了，简单
-&lt;/h3&gt;</description>
+&lt;/h3&gt;&lt;h2 id=&#34;adda&#34;&gt;ADDA
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;连续读取的时候交换地址进行读取&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/OliverWill-boop/my_blog_img/main/image-20260405145846809.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260405145846809&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果不小心定义成了同一个引脚，就会出现固定的5.00&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;不管是ad读取还是eeprom读取逻辑链条大概是这样&#34;&gt;不管是ad读取还是eeprom读取，逻辑链条大概是这样
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;开始&lt;/li&gt;
+&lt;li&gt;四步确定地址&lt;/li&gt;
+&lt;li&gt;确定“读”模式&lt;/li&gt;
+&lt;li&gt;赋值&lt;/li&gt;
+&lt;li&gt;发信号&lt;/li&gt;
+&lt;li&gt;结束&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;写入的逻辑链条大概如下&#34;&gt;写入的逻辑链条大概如下
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;开始&lt;/li&gt;
+&lt;li&gt;四步确定地址&lt;/li&gt;
+&lt;li&gt;写入操作&lt;/li&gt;
+&lt;li&gt;最后一步，da_write是wait，e2prom是stop+10个255的delay&lt;/li&gt;
+&lt;/ul&gt;
+</description>
         </item>
         <item>
         <title>CC使用初级指南</title>
